@@ -1,8 +1,12 @@
-# Validation — Vitalux Liquid Silver 1.1.0
+# Validation — Vitalux Liquid Silver 1.1.1
 
 Target: openSUSE Tumbleweed, Plasma/KWin 6.8.x, Wayland, x86_64.
 
 Verified locally:
+
+- Both executable desktop starters find their adjacent shell script in repository and standalone ZIP layouts, including local file URLs, spaces, apostrophes and Unicode in folder names.
+- Graphical shell launches hand off to Konsole with the original arguments. Terminal output is saved privately; nonzero installer exit codes survive logging. Install and uninstall use separate logs without recursive terminal launches.
+- Native builds use private writable source copies; upstream-generated shader files never modify the integrity-checked download. The standalone Kvantum CMake entry point now defines its color-scheme install destination.
 
 - Every Liquid Silver palette value matches the pinned original Vitalux source. Original source files and their SHA-256 hashes are retained. The 3840 × 2160 lossless wallpaper was compared with an independent call to the original `premium.scene_pixmap(..., 'liquid_silver')` and is pixel-identical.
 - The 1.0.0-to-1.1.0 upgrade applies the original silver accent and dark GTK preference while retaining the first pre-install backup for removal.
@@ -19,7 +23,7 @@ Verified locally:
 - Bash/Python syntax, ZIP extraction and payload hashes were checked.
 - Millennium 3.6.2's archive matched its official release checksum.
 
-The complete native C++ build on openSUSE was not verified here. An official Tumbleweed 20261021 container was available, but its package repositories were inaccessible from the build environment. Pinned sources are included so the installer builds against the target's actual headers. The Plasma 6.8 drawWindow return-type change is handled explicitly.
+The new GitHub Actions check compiles and stages all three bundled native components in a disposable openSUSE container with the source mounted read-only. See the repository Actions result for the target build; local validation alone does not verify the complete native C++ build on openSUSE. An official Tumbleweed 20261021 container was available, but its package repositories were inaccessible from the build environment. Pinned sources are included so the installer builds against the target's actual headers. The Plasma 6.8 drawWindow return-type change is handled explicitly.
 
 Not exercised: a complete openSUSE session, SDDM authentication, Steam/Discord client sessions, the Flatpak client-loader bridge and the user's GPU. The installer/guard checks failures explicitly; successful local rendering does not prove every deployment works.
 

@@ -143,6 +143,28 @@ class FullThemeTests(unittest.TestCase):
         with patch.object(full,'command'),patch.object(full,'kwin_version',return_value='6.8.0'):
             with self.assertRaisesRegex(RuntimeError,'nicht erzeugt'):full.build_native(self.ctx,stage)
 
+    def test_native_build_uses_writable_copies_without_modifying_the_package(self):
+        stage=self.home/'native-stage';stage.mkdir()
+        original=b.PACKAGE/'vendor/kwin-effects-glass/src/generated/test-marker'
+        def build_command(args,**kwargs):
+            if '-S' in args:
+                source=Path(args[args.index('-S')+1])
+                self.assertTrue(source.is_relative_to(self.ctx.state/'build'))
+                self.assertFalse(source.is_relative_to(b.PACKAGE))
+                self.put(source/'src/generated/test-marker','generated shader')
+            if '--install' in args:
+                self.put(stage/'usr/lib64/qt6/plugins/kwin/effects/plugins/libglass.so','compiled glass')
+        with patch.object(full,'command',side_effect=build_command),patch.object(full,'kwin_version',return_value='6.8.0'):
+            self.assertEqual(full.build_native(self.ctx,stage,all_components=True),'6.8.0')
+        self.assertFalse(original.exists())
+        self.assertTrue((self.ctx.state/'build/kwin-effects-glass-source/src/generated/test-marker').exists())
+
+    def test_native_command_failure_is_reported_with_the_failed_command(self):
+        import subprocess
+        with patch.object(full.subprocess,'run',side_effect=subprocess.CalledProcessError(9,['cmake'])):
+            with self.assertRaisesRegex(RuntimeError,r'Status 9.*cmake.*Installationsprotokoll'):
+                full.command(['cmake','--build','path with spaces'])
+
     def test_compositor_guard_never_loads_an_effect_for_another_running_version(self):
         self.ctx.state.mkdir(parents=True)
         self.put(self.ctx.state/'glass-build.json','{"kwin_version":"6.8.0"}')

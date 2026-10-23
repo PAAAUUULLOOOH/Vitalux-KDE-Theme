@@ -1,0 +1,36 @@
+name: Validate KDE installer
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  installer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify package, installation and launcher regressions
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 -c "import sys; sys.path.insert(0, 'package/tools'); import manage; manage.verify_package()"
+          bash -n install.sh uninstall.sh package/install.sh package/uninstall.sh package/run-installer.sh
+          sudo apt-get update -qq
+          sudo apt-get install -y desktop-file-utils
+          desktop-file-validate ./*.desktop package/*.desktop
+      - name: Compile all bundled engines on openSUSE Tumbleweed
+        timeout-minutes: 25
+        run: |
+          docker run --rm -v "$PWD:/source:ro" -w /source opensuse/tumbleweed:latest bash -euc '
+            for file in /etc/zypp/repos.d/*.repo; do
+              sed -i "s|http://download.opensuse.org|https://download.opensuse.org|g; s|http://codecs.opensuse.org|https://codecs.opensuse.org|g" "$file"
+            done
+            zypper modifyrepo --disable --all
+            zypper modifyrepo --enable repo-oss
+            zypper --non-interactive install --no-recommends python3
+            python3 tools/check_native_build.py
+          '

@@ -59,7 +59,7 @@ def record_source(source: Path, skin: str, accent: str | None = None):
         hashes[name] = hashlib.sha256(path.read_bytes()).hexdigest()
         shutil.copyfile(path, folder / path.name)
     document = {
-        'version': '1.1.0',
+        'version': json.loads((PACKAGE / 'design/vitalux.json').read_text())['version'],
         'name': 'Vitalux Liquid Silver' if skin == 'liquid_silver' else 'Vitalux Glass',
         'source': {
             'repository': 'https://github.com/PAAAUUULLOOOH/Vitalux',

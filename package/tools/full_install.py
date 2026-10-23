@@ -29,7 +29,10 @@ DEVEL = [
 
 def command(args,**kwargs):
     print('+ '+' '.join(str(x) for x in args),flush=True)
-    subprocess.run([str(x) for x in args],check=True,**kwargs)
+    try:
+        subprocess.run([str(x) for x in args],check=True,**kwargs)
+    except subprocess.CalledProcessError as error:
+        raise RuntimeError('Befehl fehlgeschlagen (Status '+str(error.returncode)+'): '+' '.join(str(x) for x in args)+'. Details stehen oben und im Installationsprotokoll.') from error
 
 
 def kwin_version():
@@ -89,18 +92,23 @@ def extract_runtime(archive,stage):
             b.atomic_write(dest,source.read(),member.mode&0o755)
 
 
-def build_native(ctx,stage):
+def build_native(ctx,stage,all_components=False):
     print('\n[1/5] Passende Build-Abhängigkeiten aus deinen eingerichteten openSUSE-Repositories installieren.',flush=True)
     dependencies=list(DEVEL)
     if not b.dbus_program():dependencies.append('/usr/lib64/qt6/bin/qdbus')
-    command(['sudo','zypper','--non-interactive','install','--no-recommends',*dependencies])
+    command([*([] if os.geteuid()==0 else ['sudo']),'zypper','--non-interactive','install','--no-recommends',*dependencies])
     version=kwin_version() # package installation may update the installed KWin
     sources=['kwin-effects-glass']
-    if not b.has_kvantum():sources.append('Kvantum')
-    if not b.aurorae_plugin():sources.append('aurorae-v2')
+    if all_components or not b.has_kvantum():sources.append('Kvantum')
+    if all_components or not b.aurorae_plugin():sources.append('aurorae-v2')
     for name in sources:
         print('Native Komponente bauen: '+name,flush=True)
-        source=b.PACKAGE/'vendor'/name
+        # Upstream generates shader resources in its source directory. Build a
+        # private copy so a read-only ZIP extraction works and repeated installs
+        # never modify the integrity-checked package.
+        source=ctx.state/'build'/(name+'-source')
+        if source.exists():shutil.rmtree(source)
+        shutil.copytree(b.PACKAGE/'vendor'/name,source)
         build=ctx.state/'build'/name
         build.mkdir(parents=True,exist_ok=True)
         command(['cmake','--fresh','-S',source,'-B',build,'-DCMAKE_BUILD_TYPE=Release','-DCMAKE_INSTALL_PREFIX=/usr','-DGLASS_WAYLAND=ON','-DGLASS_X11=OFF'])

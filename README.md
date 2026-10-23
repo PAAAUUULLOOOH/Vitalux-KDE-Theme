@@ -1,6 +1,6 @@
 # Vitalux Liquid Silver · KDE
 
-**[Download the installable ZIP](https://github.com/PAAAUUULLOOOH/Vitalux-KDE-Theme/raw/refs/heads/main/downloads/Vitalux-Liquid-Silver-openSUSE-1.1.0.zip)** · [SHA-256](downloads/Vitalux-Liquid-Silver-openSUSE-1.1.0.zip.sha256)
+**[Download the installable ZIP](https://github.com/PAAAUUULLOOOH/Vitalux-KDE-Theme/raw/refs/heads/main/downloads/Vitalux-Liquid-Silver-openSUSE-1.1.1.zip)** · [SHA-256](downloads/Vitalux-Liquid-Silver-openSUSE-1.1.1.zip.sha256)
 
 A KDE adaptation of **Vitalux’s Liquid Silver design** for **openSUSE Tumbleweed, Plasma/KWin 6.8.x, Wayland, x86_64**. Original dark smoked glass, satin-silver accents, soft polished edges and the original Vitalux atmosphere.
 
@@ -8,7 +8,9 @@ The palette is extracted from Vitalux’s source, rather than approximated. The 
 
 ## Install
 
-Extract the ZIP, close Discord and Steam, then open a terminal in the extracted folder:
+Extract the **entire ZIP**, close Discord and Steam, then double-click **`Theme installieren.desktop`**. If Dolphin asks, allow the downloaded launcher to run. It opens a terminal for progress, confirmations and sudo; the window stays visible when installation finishes. Use **`Theme deinstallieren.desktop`** for removal.
+
+Alternatively, open a terminal in the extracted folder:
 
 ```bash
 bash install.sh
@@ -24,7 +26,7 @@ bash install.sh --no-firefox   # Keep Firefox chrome unchanged
 bash uninstall.sh             # Restore the previous desktop and app settings
 ```
 
-To replace version 1.0.0, run the new installer directly. The original pre-install backup is retained, so uninstall restores your original desktop rather than the old light theme. Keep the extracted directory for removal.
+To replace version 1.0.0 or 1.1.0, run the new installer directly. The original pre-install backup is retained, so uninstall restores your original desktop rather than the old light theme. Keep the extracted directory for removal.
 
 ## Desktop and apps
 
@@ -49,6 +51,12 @@ Vencord and Millennium are third-party extensions; future client updates can aff
 
 ## Recovery and removal
 
+If clicking a `.sh` file opens an editor or appears to do nothing, use `Theme installieren.desktop` or run `bash install.sh` in Konsole. Merely extracting the ZIP does not install the theme. Installation failures are kept in the terminal and logged to `~/.local/state/liquid-glass-kde/install.log` (or `$XDG_STATE_HOME/liquid-glass-kde/install.log`). Removal has its own `uninstall.log`.
+
+```bash
+tail -n 60 ~/.local/state/liquid-glass-kde/install.log
+```
+
 The installer journals user files/per-key settings in `~/.local/state/liquid-glass-kde` and system components in `/var/lib/liquid-glass-kde`. Uninstall preserves unrelated settings and subsequent manual changes. Previously installed app loaders remain; loaders added by this installer are removed. Distribution build dependencies remain installed.
 
 After a KWin update, the startup guard retains native blur if the effect binary no longer matches the running compositor. Rerun `install.sh` after updates within KWin 6.8.x. Other Plasma versions are explicitly rejected.
@@ -61,7 +69,7 @@ python3 package/tools/full_install.py status
 
 The original Vitalux source snapshot and a real Vitalux screenshot are in [`package/reference/vitalux/`](package/reference/vitalux/). [`package/previews/`](package/previews/) contains native QtQuick renders of the KDE login/start components, not a screenshot of a complete Plasma desktop. Their original ring motif is a preview placeholder; installation uses the locally installed openSUSE mark.
 
-See [VALIDATION.md](package/VALIDATION.md). Automated tests cover palette/source fidelity, the 1.0.0 upgrade baseline, installation/restoration, profiles, file/path protections and app-loader configuration. Native QML, SVG, cursor and shader checks passed. A complete openSUSE build/session and real Steam/Discord/SDDM login sessions could not be verified here; the target installer builds and reports failures explicitly.
+See [VALIDATION.md](package/VALIDATION.md). Automated tests cover desktop-launcher execution, terminal handoff, error logging/exit codes, read-only source builds, palette/source fidelity, the 1.0.0 upgrade baseline, installation/restoration, profiles, file/path protections and app-loader configuration. Native QML, SVG, cursor and shader checks passed. A complete openSUSE build/session and real Steam/Discord/SDDM login sessions could not be verified here; the target installer builds and reports failures explicitly.
 
 Installer/build scaffolding: MIT. **Vitalux’s original source and derived visual materials retain their existing licensing position**, described in [LICENSE-NOTICE.md](LICENSE-NOTICE.md). Third-party engines keep their own licenses; see [THIRD_PARTY_NOTICES.md](package/THIRD_PARTY_NOTICES.md) and [`package/vendor/`](package/vendor/). Application/distribution marks retain their owners’ rights.
 

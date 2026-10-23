@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Install Vitalux Liquid Silver
+Name[de]=Vitalux Liquid Silver installieren
+Comment=Install the KDE theme with visible progress and an installation log
+Comment[de]=KDE-Theme mit sichtbarem Fortschritt und Installationsprotokoll einrichten
+Icon=preferences-desktop-theme
+Terminal=true
+StartupNotify=false
+Exec=python3 -c "import os,sys,urllib.parse; p=urllib.parse.urlparse(sys.argv[1]); f=urllib.parse.unquote(p.path) if p.scheme == 'file' else sys.argv[1]; os.execv('/bin/bash', ['bash', os.path.join(os.path.dirname(f), 'install.sh'), '--desktop'])" %k
+Categories=Settings;DesktopSettings;

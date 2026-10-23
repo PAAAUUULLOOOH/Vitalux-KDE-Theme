@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Uninstall Vitalux Liquid Silver
+Name[de]=Vitalux Liquid Silver deinstallieren
+Comment=Restore the previous desktop and application settings
+Comment[de]=Vorherige Desktop- und Programmeinstellungen wiederherstellen
+Icon=edit-undo
+Terminal=true
+StartupNotify=false
+Exec=python3 -c "import os,sys,urllib.parse; p=urllib.parse.urlparse(sys.argv[1]); f=urllib.parse.unquote(p.path) if p.scheme == 'file' else sys.argv[1]; os.execv('/bin/bash', ['bash', os.path.join(os.path.dirname(f), 'uninstall.sh'), '--desktop'])" %k
+Categories=Settings;DesktopSettings;

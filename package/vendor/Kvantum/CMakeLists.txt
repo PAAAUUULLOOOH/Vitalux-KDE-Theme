@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(kvantum)
+include(GNUInstallDirs)
+set(KDE_COLOR_DIR "${CMAKE_INSTALL_DATADIR}/color-schemes")
 set(CMAKE_CXX_STANDARD 17)
 option(ENABLE_QT5 "Build Qt5 variant" OFF)
 option(ENABLE_QT4 "Build Qt4 variant" OFF)

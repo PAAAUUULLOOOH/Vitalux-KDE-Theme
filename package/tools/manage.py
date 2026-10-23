@@ -21,7 +21,7 @@ import uuid
 import xml.etree.ElementTree as ET
 
 PACKAGE = Path(__file__).resolve().parent.parent
-VERSION = "1.1.0"
+VERSION = json.loads((PACKAGE / "design/vitalux.json").read_text())["version"]
 GLOBAL_ID = "io.github.PAAAUUULLOOOH.LiquidGlass"
 BEGIN = "/* BEGIN LIQUID-GLASS-KDE */"
 END = "/* END LIQUID-GLASS-KDE */"

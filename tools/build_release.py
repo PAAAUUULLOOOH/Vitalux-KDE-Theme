@@ -29,7 +29,8 @@ def main():
         for path in sorted([*files, manifest_file]):
             info = zipfile.ZipInfo(name + '/' + str(path.relative_to(PACKAGE)))
             info.create_system = 3
-            mode = 0o755 if path.name in ('install.sh', 'uninstall.sh') else 0o644
+            launcher = path.parent == PACKAGE and path.suffix == '.desktop'
+            mode = 0o755 if launcher or path.name in ('install.sh', 'uninstall.sh', 'run-installer.sh') else 0o644
             info.external_attr = (stat.S_IFREG | mode) << 16
             target.writestr(info, path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
     temporary.replace(archive)

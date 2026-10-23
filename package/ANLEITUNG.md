@@ -4,7 +4,9 @@ Für **openSUSE Tumbleweed, Plasma/KWin 6.8.x, Wayland und x86_64**. Vorlage ist
 
 ## Installieren
 
-ZIP vollständig entpacken, Discord und Steam schließen und im entpackten Ordner ein Terminal öffnen:
+ZIP **vollständig entpacken**, Discord und Steam schließen und **`Theme installieren.desktop`** doppelt anklicken. Falls Dolphin nachfragt, das Ausführen des Starters erlauben. Die Installation öffnet ein Terminal für Fortschritt, Rückfragen und sudo; das Ergebnis bleibt sichtbar. **`Theme deinstallieren.desktop`** startet die Rücknahme.
+
+Alternativ im entpackten Ordner ein Terminal öffnen:
 
 ```bash
 bash install.sh
@@ -20,7 +22,17 @@ bash install.sh --no-firefox  # Firefox-Oberfläche beibehalten
 bash uninstall.sh            # Ursprünglichen Zustand wiederherstellen
 ```
 
-Beim Wechsel von 1.0.0 einfach den neuen Installer ausführen. Die erste Sicherung bleibt erhalten. Bewahre den entpackten Ordner für die Deinstallation auf.
+Beim Wechsel von 1.0.0 oder 1.1.0 einfach den neuen Installer ausführen. Die erste Sicherung bleibt erhalten. Bewahre den entpackten Ordner für die Deinstallation auf.
+
+## Wenn beim Anklicken nichts passiert
+
+Eine `.sh`-Datei startet je nach Dolphin-Einstellung nur einen Editor. Verwende den `.desktop`-Starter oder führe `bash install.sh` in Konsole aus. Nur Entpacken installiert noch nichts. Starte ohne sudo; der Installer fragt selbst nach deinem Passwort.
+
+Das Protokoll liegt unter `~/.local/state/liquid-glass-kde/install.log`, die Deinstallation unter `uninstall.log`. Bei eigenem `$XDG_STATE_HOME` liegt es dort im Unterordner `liquid-glass-kde`.
+
+```bash
+tail -n 60 ~/.local/state/liquid-glass-kde/install.log
+```
 
 ## Enthalten
 

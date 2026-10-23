@@ -33,4 +33,15 @@ jobs:
             zypper modifyrepo --enable repo-oss
             zypper --non-interactive install --no-recommends python3
             python3 tools/check_native_build.py
-          '
+          ' 2>&1 | tee native-build.log
+      - name: Report native build failure
+        if: failure()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          log = Path('native-build.log')
+          if log.exists():
+              tail = '\n'.join(log.read_text(errors='replace').splitlines()[-65:])[-10000:]
+              message = tail.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+              print('::error title=openSUSE native build::' + message)
+          PY

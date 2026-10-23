@@ -351,7 +351,7 @@ def dbus_program():
     for name in ("qdbus6", "qdbus-qt6", "qdbus"):
         if shutil.which(name):
             return shutil.which(name)
-    for p in ("/usr/lib64/qt6/bin/qdbus", "/usr/lib/qt6/bin/qdbus"):
+    for p in ("/usr/lib64/qt6/bin/qdbus", "/usr/lib/qt6/bin/qdbus", "/usr/libexec/qt6/qdbus"):
         if Path(p).is_file():
             return p
     return None

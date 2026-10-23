@@ -18,7 +18,7 @@ def main():
     build=json.loads((state/'glass-build.json').read_text())
     dbus=next((shutil.which(x) for x in ('qdbus6','qdbus-qt6','qdbus') if shutil.which(x)),None)
     if not dbus:
-        dbus=next((str(x) for x in (Path('/usr/lib64/qt6/bin/qdbus'),Path('/usr/lib/qt6/bin/qdbus')) if x.exists()),None)
+        dbus=next((str(x) for x in (Path('/usr/lib64/qt6/bin/qdbus'),Path('/usr/lib/qt6/bin/qdbus'),Path('/usr/libexec/qt6/qdbus')) if x.exists()),None)
     if not dbus:return 1
     info=''
     for _ in range(15):

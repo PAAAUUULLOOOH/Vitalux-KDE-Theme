@@ -7,6 +7,7 @@ Verified locally:
 - Both executable desktop starters find their adjacent shell script in repository and standalone ZIP layouts, including local file URLs, spaces, apostrophes and Unicode in folder names.
 - Graphical shell launches hand off to Konsole with the original arguments. Terminal output is saved privately; nonzero installer exit codes survive logging. Install and uninstall use separate logs without recursive terminal launches.
 - Native builds use private writable source copies; upstream-generated shader files never modify the integrity-checked download. The standalone Kvantum CMake entry point now defines its color-scheme install destination.
+- The openSUSE check reproduced the invalid `/usr/lib64/qt6/bin/qdbus` package request. The installer now requests `qt6-tools-qdbus` and also recognizes the Qt6 libexec location. System theme directories use readable permissions independently of the user's umask; backup and installer logs remain private.
 
 - Every Liquid Silver palette value matches the pinned original Vitalux source. Original source files and their SHA-256 hashes are retained. The 3840 × 2160 lossless wallpaper was compared with an independent call to the original `premium.scene_pixmap(..., 'liquid_silver')` and is pixel-identical.
 - The 1.0.0-to-1.1.0 upgrade applies the original silver accent and dark GTK preference while retaining the first pre-install backup for removal.

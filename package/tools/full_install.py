@@ -95,7 +95,7 @@ def extract_runtime(archive,stage):
 def build_native(ctx,stage,all_components=False):
     print('\n[1/5] Passende Build-Abhängigkeiten aus deinen eingerichteten openSUSE-Repositories installieren.',flush=True)
     dependencies=list(DEVEL)
-    if not b.dbus_program():dependencies.append('/usr/lib64/qt6/bin/qdbus')
+    if not b.dbus_program():dependencies.append('qt6-tools-qdbus')
     command([*([] if os.geteuid()==0 else ['sudo']),'zypper','--non-interactive','install','--no-recommends',*dependencies])
     version=kwin_version() # package installation may update the installed KWin
     sources=['kwin-effects-glass']

@@ -50,4 +50,4 @@ Nach einem KWin-Update bleibt bei unpassender Effekt-Version der native Blur akt
 python3 tools/full_install.py status
 ```
 
-Ein vollständiger Build und eine echte KDE-/Steam-/Discord-/SDDM-Sitzung konnten hier nicht geprüft werden. Tests und Grenzen: VALIDATION.md. Original-Vitalux-Material bleibt unter dessen bisherigem Lizenzhinweis; weitere Lizenzen stehen in LICENSE-NOTICE.md und THIRD_PARTY_NOTICES.md.
+Alle drei nativen Engines wurden unter openSUSE erfolgreich gebaut und die vorgesehenen Installationsdateien geprüft. Eine echte KDE-/Steam-/Discord-/SDDM-Sitzung konnte hier nicht geprüft werden. Tests und Grenzen: VALIDATION.md. Original-Vitalux-Material bleibt unter dessen bisherigem Lizenzhinweis; weitere Lizenzen stehen in LICENSE-NOTICE.md und THIRD_PARTY_NOTICES.md.

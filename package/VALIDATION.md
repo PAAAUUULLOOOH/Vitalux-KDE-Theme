@@ -2,7 +2,7 @@
 
 Target: openSUSE Tumbleweed, Plasma/KWin 6.8.x, Wayland, x86_64.
 
-Verified locally:
+Verified locally and in CI:
 
 - Both executable desktop starters find their adjacent shell script in repository and standalone ZIP layouts, including local file URLs, spaces, apostrophes and Unicode in folder names.
 - Graphical shell launches hand off to Konsole with the original arguments. Terminal output is saved privately; nonzero installer exit codes survive logging. Install and uninstall use separate logs without recursive terminal launches.
@@ -24,7 +24,9 @@ Verified locally:
 - Bash/Python syntax, ZIP extraction and payload hashes were checked.
 - Millennium 3.6.2's archive matched its official release checksum.
 
-The new GitHub Actions check compiles and stages all three bundled native components in a disposable openSUSE container with the source mounted read-only. See the repository Actions result for the target build; local validation alone does not verify the complete native C++ build on openSUSE. An official Tumbleweed 20261021 container was available, but its package repositories were inaccessible from the build environment. Pinned sources are included so the installer builds against the target's actual headers. The Plasma 6.8 drawWindow return-type change is handled explicitly.
+The complete C++ build and staging of Glass, Kvantum and Aurorae passed on openSUSE Tumbleweed / KWin 6.8.x in [GitHub Actions run 40015302285](https://github.com/PAAAUUULLOOOH/Vitalux-KDE-Theme/actions/runs/40015302285). All expected plugins and the Kvantum color scheme were present, all staged destinations passed the system allowlist, and the read-only source package retained its original integrity hashes. This is a build/install-plan check, not a live desktop installation. The 50 regression tests also passed.
+
+The verified fixes cover the Tumbleweed Qt6 D-Bus package, compositor-free RPM version detection, the standalone Kvantum install destination, KWin 6.8 background-item and pixel-grid APIs, and writable build copies. Original visual materials remain unchanged.
 
 Not exercised: a complete openSUSE session, SDDM authentication, Steam/Discord client sessions, the Flatpak client-loader bridge and the user's GPU. The installer/guard checks failures explicitly; successful local rendering does not prove every deployment works.
 

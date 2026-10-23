@@ -36,7 +36,7 @@
 #include "wayland_server.h"
 #endif
 
-#if PLASMA_VERSION >= 0x060404 && !defined(GLASS_X11)
+#if defined(GLASS_KWIN_BACKGROUND_ITEM) && !defined(GLASS_X11)
 #include <scene/backgroundeffectitem.h>
 #endif
 
@@ -378,7 +378,7 @@ void BlurEffect::reconfigure(ReconfigureFlags flags)
         m_settings.general.contrast,
         m_settings.general.brightness
     );
-#if PLASMA_VERSION >= 0x060404 && !defined(GLASS_X11)
+#if defined(GLASS_KWIN_BACKGROUND_ITEM) && !defined(GLASS_X11)
     for (auto &[window, data] : m_windows) {
         data.blurItem->setPixelsToExpandRepaintsBelowOpaqueRegions(m_expandSize);
     }
@@ -495,7 +495,7 @@ void BlurEffect::updateBlurRegion(EffectWindow *w)
         data.content = content;
         data.frame = frame;
         data.colorMatrix = colorTransformMatrix(saturation.value_or(1.0), contrast.value_or(1.0), 1.0);
-#if PLASMA_VERSION < 0x060404 || defined(GLASS_X11)
+#if !defined(GLASS_KWIN_BACKGROUND_ITEM) || defined(GLASS_X11)
         data.windowEffect = ItemEffect(w->windowItem());
 #else
         if (!data.blurItem) {

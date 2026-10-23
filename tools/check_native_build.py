@@ -28,9 +28,10 @@ def main():
             destination = Path('/') / path.relative_to(stage)
             if path.is_symlink() or not root_helper.permitted(destination):
                 raise RuntimeError('Unexpected native install target: ' + str(destination))
-        for name in ('libglass.so', 'libkwin_glass_config.so', 'libkvantum.so', 'org.kde.kwin.aurorae.v2.so', 'Kvantum.colors'):
-            if not any(path.name == name for path in files):
-                raise RuntimeError('Missing compiled component: ' + name)
+        for names in (('glass.so', 'libglass.so'), ('kwin_glass_config.so', 'libkwin_glass_config.so'),
+                      ('libkvantum.so',), ('org.kde.kwin.aurorae.v2.so',), ('Kvantum.colors',)):
+            if not any(path.name in names for path in files):
+                raise RuntimeError('Missing compiled component: ' + '/'.join(names))
         manage.verify_package()
         print('All bundled native components compiled and staged for KWin ' + version + '.', flush=True)
         print('Source package unchanged; all destinations passed the system allowlist.', flush=True)

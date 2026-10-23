@@ -86,6 +86,10 @@ if(${KWin_VERSION} VERSION_GREATER_EQUAL 6.7)
     set(GLASS_KWIN_67 ON)
 endif()
 
+if(${KWin_VERSION} VERSION_GREATER_EQUAL 6.4.4)
+    set(GLASS_KWIN_BACKGROUND_ITEM ON)
+endif()
+
 # Liquid Glass openSUSE adaptation: KWin 6.8 made drawWindow return bool.
 if(${KWin_VERSION} VERSION_GREATER_EQUAL 6.8)
     set(GLASS_KWIN_68 ON)

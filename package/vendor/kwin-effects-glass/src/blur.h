@@ -19,7 +19,6 @@
 #include <QStringList>
 
 #include <unordered_map>
-#include <Plasma/plasma_version.h>
 
 namespace KWin
 {
@@ -59,7 +58,7 @@ struct BlurEffectData
      *  color spaces and even different windows on them
      */
     std::unordered_map<BlurOutput *, BlurRenderData> render;
-#if PLASMA_VERSION >= 0x060404 && !defined(GLASS_X11)
+#if defined(GLASS_KWIN_BACKGROUND_ITEM) && !defined(GLASS_X11)
     std::unique_ptr<BackgroundEffectItem> blurItem;
 #endif
 

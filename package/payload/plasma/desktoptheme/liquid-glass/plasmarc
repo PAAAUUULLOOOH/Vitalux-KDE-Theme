@@ -4,9 +4,9 @@ FallbackTheme=default
 enabled=true
 [ContrastEffect]
 enabled=true
-contrast=0.22
-intensity=1.10
-saturation=1.12
+contrast=1.0
+intensity=1.0
+saturation=1.0
 [AdaptiveTransparency]
 enabled=true
 [Wallpaper]

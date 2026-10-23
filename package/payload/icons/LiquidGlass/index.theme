@@ -1,7 +1,7 @@
 [Icon Theme]
-Name=Liquid Glass
+Name=Vitalux Liquid Silver
 Comment=Glass frames around the original locally installed application icons
-Inherits=breeze,hicolor
+Inherits=breeze-dark,breeze,hicolor
 Directories=scalable/apps,scalable/places,scalable/mimetypes
 [scalable/apps]
 Size=64

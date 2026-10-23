@@ -1,10 +1,10 @@
 {
   "KPlugin": {
     "Id": "liquid-glass",
-    "Name": "Liquid Glass",
-    "Description": "Clear glass, soft reflections and a blue accent for Plasma 6.8",
-    "Version": "1.0.0",
-    "License": "MIT",
+    "Name": "Vitalux Liquid Silver",
+    "Description": "Original Vitalux Liquid Silver: smoked glass, satin silver and its original atmosphere",
+    "Version": "1.1.0",
+    "License": "LicenseRef-Vitalux",
     "Authors": [
       {
         "Name": "PAAAUUULLOOOH"

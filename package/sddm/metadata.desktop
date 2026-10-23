@@ -1,11 +1,11 @@
 [SddmGreeterTheme]
-Name=Liquid Glass
-Description=Clear glass for openSUSE Tumbleweed
+Name=Vitalux Liquid Silver
+Description=Original Vitalux Liquid Silver for openSUSE Tumbleweed
 Author=PAAAUUULLOOOH
 Copyright=2026 PAAAUUULLOOOH
-License=MIT
+License=LicenseRef-Vitalux
 Type=sddm-theme
-Version=1.0.0
+Version=1.1.0
 MainScript=Main.qml
 ConfigFile=theme.conf
 Theme-Id=liquid-glass

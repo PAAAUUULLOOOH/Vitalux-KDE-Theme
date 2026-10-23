@@ -1,6 +1,8 @@
 # Sources, licenses and marks
 
-Original theme artwork, icons/cursors, wallpaper, QML, stylesheets and installer code: MIT, copyright 2026 PAAAUUULLOOOH. See LICENSE.
+Independent installer/build tooling, cursor geometry and integration scaffolding: MIT, copyright 2026 PAAAUUULLOOOH. See LICENSE and LICENSE-NOTICE.md for the scope.
+
+The original Vitalux Liquid Silver palette, material implementation, source snapshots, reference images and derived artwork retain Vitalux’s existing licensing position: no general public license. They are not relicensed under MIT. The owner requested this port. The exact original notice is retained in reference/vitalux/LICENSE-NOTICE.md; source commit and SHA-256 hashes are recorded in design/vitalux.json.
 
 ## Bundled third-party source
 
@@ -37,4 +39,8 @@ https://en.opensuse.org/openSUSE:Trademark_guidelines
 
 The official-logo directory marks its artwork as all rights reserved. Firefox/Mozilla, Discord, Steam/Valve, TeamSpeak, ProtonPlus, Haruna/KDE and other application marks retain their owners' rights.
 
-Apple and Liquid Glass identify visual inspiration only. This project is independent and not endorsed by Apple, openSUSE, KDE or application vendors. Native QML previews use this project's original ring motif; installation substitutes the locally installed distribution mark.
+This version follows Vitalux Liquid Silver. It is independent and not endorsed by openSUSE, KDE or application vendors. Native QML previews use this project's original ring motif; installation substitutes the locally installed distribution mark.
+
+## Build-only graphics tools
+
+The development import/render tools use Python, PySide6/Qt and Pillow. Their runtimes are not redistributed in the ZIP. Python license: https://docs.python.org/3/license.html · PySide6 sources/licenses: https://code.qt.io/cgit/pyside/pyside-setup.git/ · Qt licensing: https://www.qt.io/licensing/ · Pillow license (MIT-CMU and historical notices): https://github.com/python-pillow/Pillow/blob/main/LICENSE . Generated source/material ownership is described above.

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="150" viewBox="0 0 200 150">
+<defs>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".86"/><stop offset=".47" stop-color="#f6f9ff" stop-opacity=".62"/><stop offset="1" stop-color="#e9eef9" stop-opacity=".74"/></linearGradient>
+ <linearGradient id="rim" x2=".8" y2="1"><stop stop-color="#ffffff" stop-opacity=".98"/><stop offset=".45" stop-color="#ffffff" stop-opacity=".34"/><stop offset="1" stop-color="#b6c8df" stop-opacity=".62"/></linearGradient>
+ <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#399aff"/><stop offset="1" stop-color="#007aff"/></linearGradient>
+ <linearGradient id="quiet" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".74"/><stop offset="1" stop-color="#e5ebf4" stop-opacity=".65"/></linearGradient>
+</defs>
+<g id="center" transform="translate(0 0)"><rect x="12" y="12" width="40" height="40" fill="#f3f6fb" fill-opacity=".66"/></g>
+<g id="top" transform="translate(0 0)"><path d="M12 12V.5H52V12Z" fill="#f3f6fb" fill-opacity=".66"/><path d="M12 .5H52" fill="none" stroke="url(#rim)"/></g>
+<g id="bottom" transform="translate(0 0)"><path d="M12 52H52V63.5H12Z" fill="#f3f6fb" fill-opacity=".66"/><path d="M12 63.5H52" fill="none" stroke="url(#rim)"/></g>
+<g id="left" transform="translate(0 0)"><path d="M12 12H.5V52H12Z" fill="#f3f6fb" fill-opacity=".66"/><path d="M.5 12V52" fill="none" stroke="url(#rim)"/></g>
+<g id="right" transform="translate(0 0)"><path d="M52 12H63.5V52H52Z" fill="#f3f6fb" fill-opacity=".66"/><path d="M63.5 12V52" fill="none" stroke="url(#rim)"/></g>
+<g id="topleft" transform="translate(0 0)"><path d="M12 12H.5Q.5 .5 12 .5Z" fill="#f3f6fb" fill-opacity=".66"/><path d="M.5 12Q.5 .5 12 .5" fill="none" stroke="url(#rim)"/></g>
+<g id="topright" transform="translate(0 0)"><path d="M52 12V.5Q63.5 .5 63.5 12Z" fill="#f3f6fb" fill-opacity=".66"/><path d="M52 .5Q63.5 .5 63.5 12" fill="none" stroke="url(#rim)"/></g>
+<g id="bottomleft" transform="translate(0 0)"><path d="M12 52V63.5Q.5 63.5 .5 52Z" fill="#f3f6fb" fill-opacity=".66"/><path d="M.5 52Q.5 63.5 12 63.5" fill="none" stroke="url(#rim)"/></g>
+<g id="bottomright" transform="translate(0 0)"><path d="M52 52H63.5Q63.5 63.5 52 63.5Z" fill="#f3f6fb" fill-opacity=".66"/><path d="M63.5 52Q63.5 63.5 52 63.5" fill="none" stroke="url(#rim)"/></g>
+<rect id="hint-top-margin" x="66" y="0" width="12" height="12" fill="#f00"/>
+<rect id="hint-bottom-margin" x="66" y="0" width="12" height="12" fill="#f00"/>
+<rect id="hint-left-margin" x="66" y="0" width="12" height="12" fill="#f00"/>
+<rect id="hint-right-margin" x="66" y="0" width="12" height="12" fill="#f00"/>
+<g id="mask-center" transform="translate(100 0)"><rect x="12" y="12" width="40" height="40" fill="#000000"/></g>
+<g id="mask-top" transform="translate(100 0)"><path d="M12 12V.5H52V12Z" fill="#000000"/><path d="M12 .5H52" fill="none" stroke="none"/></g>
+<g id="mask-bottom" transform="translate(100 0)"><path d="M12 52H52V63.5H12Z" fill="#000000"/><path d="M12 63.5H52" fill="none" stroke="none"/></g>
+<g id="mask-left" transform="translate(100 0)"><path d="M12 12H.5V52H12Z" fill="#000000"/><path d="M.5 12V52" fill="none" stroke="none"/></g>
+<g id="mask-right" transform="translate(100 0)"><path d="M52 12H63.5V52H52Z" fill="#000000"/><path d="M63.5 12V52" fill="none" stroke="none"/></g>
+<g id="mask-topleft" transform="translate(100 0)"><path d="M12 12H.5Q.5 .5 12 .5Z" fill="#000000"/><path d="M.5 12Q.5 .5 12 .5" fill="none" stroke="none"/></g>
+<g id="mask-topright" transform="translate(100 0)"><path d="M52 12V.5Q63.5 .5 63.5 12Z" fill="#000000"/><path d="M52 .5Q63.5 .5 63.5 12" fill="none" stroke="none"/></g>
+<g id="mask-bottomleft" transform="translate(100 0)"><path d="M12 52V63.5Q.5 63.5 .5 52Z" fill="#000000"/><path d="M.5 52Q.5 63.5 12 63.5" fill="none" stroke="none"/></g>
+<g id="mask-bottomright" transform="translate(100 0)"><path d="M52 52H63.5Q63.5 63.5 52 63.5Z" fill="#000000"/><path d="M63.5 52Q63.5 63.5 52 63.5" fill="none" stroke="none"/></g>
+<rect id="mask-hint-top-margin" x="166" y="0" width="12" height="12" fill="#f00"/>
+<rect id="mask-hint-bottom-margin" x="166" y="0" width="12" height="12" fill="#f00"/>
+<rect id="mask-hint-left-margin" x="166" y="0" width="12" height="12" fill="#f00"/>
+<rect id="mask-hint-right-margin" x="166" y="0" width="12" height="12" fill="#f00"/>
+<rect id="hint-stretch-borders" x="4" y="120" width="2" height="2"/>
+</svg>

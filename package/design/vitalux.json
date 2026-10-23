@@ -1,0 +1,145 @@
+{
+  "version": "1.1.0",
+  "name": "Vitalux Liquid Silver",
+  "source": {
+    "repository": "https://github.com/PAAAUUULLOOOH/Vitalux",
+    "commit": "2f05db7886e7a76aff35672f22d8d32210b2275e",
+    "skin": "liquid_silver",
+    "display_name": "Liquid Silver",
+    "files": {
+      "vitalux/premium.py": "bf2dac8f2831468c0fcd37e6046934ee4d1dc448bba12ba1704c540fe0e16daf",
+      "vitalux/theme.py": "0b25939eae23ac13fec73ac35c2301dcb77a5a75c2164835ae8d8f077e236964",
+      "vitalux/signature_designs.py": "3181e2f04e37b191918a61816d3e0ef48fb203d8a9eca7603f9214632c4e9af6",
+      "LICENSE-NOTICE.md": "1e48e3d4371be32e590da29d7511e6a7fffa49d8aff0e19e1a39d8a1e98f09e4"
+    }
+  },
+  "colors": {
+    "title": "Liquid Silver",
+    "subtitle": "SMOKED GLASS / SATIN SILVER",
+    "bg": "#080b10",
+    "sidebar": "#0d1219",
+    "card": "#151b23",
+    "border": "#73889c",
+    "track": "#2a3543",
+    "grid": "#2b3442",
+    "text": "#edf2f7",
+    "muted": "#afbdc9",
+    "accent": "#b9ccdc",
+    "secondary": "#e3edf5",
+    "light": "#657f97",
+    "bloom": "#34465b",
+    "shadow": "#101b27",
+    "series": [
+      "#b9ccdc",
+      "#e3edf5",
+      "#7b95aa",
+      "#a7bbcc"
+    ]
+  },
+  "controls": {
+    "input_bg": "#1c232b",
+    "button_bg": "#252d36",
+    "active_bg": "#333b44",
+    "hover_border": "#9db1c2"
+  },
+  "material": {
+    "radius": {
+      "panel": 21,
+      "strong": 25,
+      "compact": 12
+    },
+    "wash": [
+      [
+        0,
+        "card",
+        167
+      ],
+      [
+        0.45,
+        "bg",
+        202
+      ],
+      [
+        1,
+        "card",
+        210
+      ]
+    ],
+    "strong_wash": [
+      [
+        0,
+        "card",
+        185
+      ],
+      [
+        0.45,
+        "bg",
+        215
+      ],
+      [
+        1,
+        "card",
+        210
+      ]
+    ],
+    "edge": [
+      [
+        0,
+        "secondary",
+        125
+      ],
+      [
+        0.18,
+        "accent",
+        90
+      ],
+      [
+        0.4,
+        "border",
+        49
+      ],
+      [
+        0.62,
+        "accent",
+        62
+      ],
+      [
+        0.83,
+        "border",
+        38
+      ],
+      [
+        1,
+        "secondary",
+        82
+      ]
+    ],
+    "inner_edge": {
+      "color": "#ffffff",
+      "alpha": 20,
+      "inset": 2
+    },
+    "sheen": [
+      [
+        0,
+        "#ffffff",
+        21
+      ],
+      [
+        0.13,
+        "#ffffff",
+        3
+      ],
+      [
+        0.6,
+        "#ffffff",
+        0
+      ],
+      [
+        1,
+        "#000000",
+        23
+      ]
+    ]
+  }
+}

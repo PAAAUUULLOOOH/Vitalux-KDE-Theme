@@ -162,7 +162,7 @@ def install(ctx,journal,firefox=True):
                 line='Exec='+value+' -stylesheet '+arg+'\n'
             out.append(line)
         journal.put(existing,''.join(out).encode())
-    journal.doc['app_theme_version']='1.0.0'
+    journal.doc['app_theme_version']=b.VERSION
     journal.save()
 
 
@@ -204,25 +204,26 @@ def copy_brand_to_splash(ctx,journal):
 
 
 GLASS_SETTINGS={
- 'PhysicallyBasedRefraction':'true','RefractionStrength':'14','RefractionEdgeSize':'1.4',
- 'RefractionRGBFringing':'2','RimSpecular':'true','RimWidth':'12','RimSpecularScale':'8',
+ 'PhysicallyBasedRefraction':'true','RefractionStrength':'5','RefractionEdgeSize':'1.4',
+ 'RefractionRGBFringing':'0','RimSpecular':'true','RimWidth':'12','RimSpecularScale':'2',
  'EdgeLighting':'false','BlurStrength':'4','DockBlurStrength':'2','DecorationBlurStrength':'3',
  'NoiseStrength':'0','DockNoiseStrength':'0','DecorationNoiseStrength':'0','BlurDecorations':'true',
  'BlurMenus':'true','BlurDocks':'true','DockCornerRadius':'18','MenuCornerRadius':'18',
- 'Brightness':'1.02','Contrast':'0.95','Saturation':'1.05','TintColor':'#16eff5ff',
+ 'Brightness':'1.0','Contrast':'1.0','Saturation':'1.0',
  'FakeBlur':'false','RoundCornersOfMaximizedWindows':'false',
 }
 
 
 def configure_glass(ctx,journal,version):
-    for key,value in GLASS_SETTINGS.items():journal.set(ctx.config/'kwinrc','[Effect-blurplus]',key,value)
+    settings=dict(GLASS_SETTINGS, TintColor='#12'+b.design_reference()['colors']['bg'][1:])
+    for key,value in settings.items():journal.set(ctx.config/'kwinrc','[Effect-blurplus]',key,value)
     # Autostart checks the *running* KWin version before replacing native blur.
     # KWin never loads an old binary automatically after a Tumbleweed upgrade.
     journal.set(ctx.config/'kwinrc','[Plugins]','glassEnabled','false')
     journal.set(ctx.config/'kwinrc','[Plugins]','blurEnabled','true')
     runner=ctx.data/'liquid-glass/guard.py'
     journal.put(runner,(b.PACKAGE/'tools/glass_guard.py').read_bytes(),0o755)
-    journal.put(ctx.state/'glass-build.json',(json.dumps({'kwin_version':version,'version':'1.0.0'},indent=2)+'\n').encode(),0o600)
+    journal.put(ctx.state/'glass-build.json',(json.dumps({'kwin_version':version,'version':b.VERSION},indent=2)+'\n').encode(),0o600)
     escaped=str(runner).replace('\\','\\\\').replace('"','\\"').replace('`','\\`').replace('$','\\$')
     desktop=f'[Desktop Entry]\nType=Application\nName=Liquid Glass compositor\nExec=python3 "{escaped}"\nOnlyShowIn=KDE;\nX-KDE-autostart-after=panel\n'
     journal.put(ctx.config/'autostart/liquid-glass-compositor.desktop',desktop.encode())

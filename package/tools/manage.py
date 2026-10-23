@@ -21,7 +21,7 @@ import uuid
 import xml.etree.ElementTree as ET
 
 PACKAGE = Path(__file__).resolve().parent.parent
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 GLOBAL_ID = "io.github.PAAAUUULLOOOH.LiquidGlass"
 BEGIN = "/* BEGIN LIQUID-GLASS-KDE */"
 END = "/* END LIQUID-GLASS-KDE */"
@@ -484,12 +484,28 @@ class IconFinder:
         return self.files.get(name) or self.files.get(p.stem)
 
 
+def design_reference():
+    """Use the same pinned source palette as the generated desktop surfaces."""
+    document = json.loads((PACKAGE / "design/vitalux.json").read_text())
+    required = ("bg", "sidebar", "card", "border", "text", "muted", "accent", "secondary")
+    for role in required:
+        if not re.fullmatch(r"#[\da-fA-F]{6}", document["colors"].get(role, "")):
+            raise ValueError("Ungültige Vitalux-Originalfarbe: " + role)
+    return document
+
+
 def glass_icon(source):
     """Preserve the installed app's own mark on an original glass plate."""
     root = ET.Element(f"{{{SVG_NS}}}svg", {"width": "128", "height": "128", "viewBox": "0 0 128 128"})
-    defs = ET.fromstring(f'''<defs xmlns="{SVG_NS}"><linearGradient id="lg-plate" x2=".8" y2="1"><stop stop-color="#ffffff" stop-opacity=".96"/><stop offset=".5" stop-color="#eaf2ff" stop-opacity=".78"/><stop offset="1" stop-color="#c7dafa" stop-opacity=".94"/></linearGradient><linearGradient id="lg-rim" x2=".8" y2="1"><stop stop-color="#ffffff"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".55"/><stop offset="1" stop-color="#7fa8df" stop-opacity=".85"/></linearGradient></defs>''')
+    reference = design_reference()
+    colors = reference['colors']
+    defs = ET.Element(f"{{{SVG_NS}}}defs")
+    for ident, stops in [('lg-plate', reference['material']['wash']), ('lg-rim', reference['material']['edge'])]:
+        gradient = ET.SubElement(defs, f"{{{SVG_NS}}}linearGradient", {'id': ident, 'x2': '.8', 'y2': '1'})
+        for position, role, alpha in stops:
+            ET.SubElement(gradient, f"{{{SVG_NS}}}stop", {'offset': str(position), 'stop-color': colors[role], 'stop-opacity': str(alpha / 255)})
     root.append(defs)
-    for x, y, w, h, r, fill, opacity in [(8, 10, 112, 112, 30, "#17345a", ".10"), (8, 8, 112, 112, 30, "url(#lg-plate)", "1")]:
+    for x, y, w, h, r, fill, opacity in [(8, 10, 112, 112, 25, colors['bg'], ".35"), (8, 8, 112, 112, 25, "url(#lg-plate)", "1")]:
         a = {"x": str(x), "y": str(y), "width": str(w), "height": str(h), "rx": str(r), "fill": fill, "opacity": opacity}
         if y == 8:
             a.update({"stroke": "url(#lg-rim)", "stroke-width": "1.5"})
@@ -544,7 +560,7 @@ def glass_icon(source):
         if len(b) > 4_000_000 or not b.startswith(b"\x89PNG\r\n\x1a\n"):
             raise ValueError("Icon ist zu groß")
         ET.SubElement(root, f"{{{SVG_NS}}}image", {"x": "25", "y": "25", "width": "78", "height": "78", "preserveAspectRatio": "xMidYMid meet", f"{{{XLINK_NS}}}href": "data:image/png;base64," + base64.b64encode(b).decode()})
-    ET.SubElement(root, f"{{{SVG_NS}}}path", {"d": "M22 28Q25 16 42 16H85", "fill": "none", "stroke": "#ffffff", "stroke-width": "1.5", "stroke-opacity": ".85", "stroke-linecap": "round"})
+    ET.SubElement(root, f"{{{SVG_NS}}}path", {"d": "M22 28Q25 16 42 16H85", "fill": "none", "stroke": colors['secondary'], "stroke-width": "1", "stroke-opacity": ".48", "stroke-linecap": "round"})
     return ET.tostring(root, encoding="utf-8", xml_declaration=True)
 
 
@@ -667,12 +683,14 @@ def aurorae_plugin():
 
 def apply_settings(ctx, journal):
     scheme = read_ini(PACKAGE / "payload/color-schemes/LiquidGlass.colors")
+    accent = design_reference()['colors']['accent']
+    accent_rgb = ','.join(str(int(accent[i:i+2], 16)) for i in (1, 3, 5))
     for section in scheme.sections():
         if section == "General":
             continue
         for key, value in scheme[section].items():
             journal.set(ctx.config / "kdeglobals", f"[{section}]", key, value)
-    for group, key, value in [("[KDE]", "LookAndFeelPackage", GLOBAL_ID), ("[General]", "ColorScheme", "LiquidGlass"), ("[General]", "AccentColor", "0,122,255"), ("[Icons]", "Theme", "LiquidGlass"), ("[KDE]", "widgetStyle", "kvantum" if has_kvantum() else "Breeze")]:
+    for group, key, value in [("[KDE]", "LookAndFeelPackage", GLOBAL_ID), ("[General]", "ColorScheme", "LiquidGlass"), ("[General]", "AccentColor", accent_rgb), ("[Icons]", "Theme", "LiquidGlass"), ("[KDE]", "widgetStyle", "kvantum" if has_kvantum() else "Breeze")]:
         journal.set(ctx.config / "kdeglobals", group, key, value)
     journal.set(ctx.config / "plasmarc", "[Theme]", "name", "liquid-glass")
     journal.set(ctx.config / "Kvantum/kvantum.kvconfig", "", "theme", "KvLiquidGlass")
@@ -684,7 +702,7 @@ def apply_settings(ctx, journal):
         journal.set(ctx.config / "kwinrc", "[org.kde.kdecoration2]", "theme", "__aurorae__svg__liquid-glass")
     else:
         print("Aurorae nicht gefunden: Deine bisherige Fensterdekoration bleibt aktiv. Siehe ANLEITUNG.md.")
-    for key, value in [("gtk-theme-name", "LiquidGlass"), ("gtk-icon-theme-name", "LiquidGlass"), ("gtk-application-prefer-dark-theme", "false")]:
+    for key, value in [("gtk-theme-name", "LiquidGlass"), ("gtk-icon-theme-name", "LiquidGlass"), ("gtk-application-prefer-dark-theme", "true")]:
         journal.set(ctx.config / "gtk-3.0/settings.ini", "[Settings]", key, value)
     # kde-gtk-config reads the name from kdeglobals on subsequent login.
     journal.set(ctx.config / "kdeglobals", "[KDE]", "gtkTheme", "LiquidGlass")

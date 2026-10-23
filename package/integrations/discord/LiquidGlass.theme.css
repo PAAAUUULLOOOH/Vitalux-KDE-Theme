@@ -1,41 +1,31 @@
+
 /**
- * @name Liquid Glass
+ * @name Vitalux Liquid Silver
  * @author PAAAUUULLOOOH
- * @version 1.0.0
- * @description Liquid Glass, activated through Vencord by the package installer.
+ * @version 1.1.0
+ * @description Original Vitalux Liquid Silver palette, activated through Vencord.
  */
-.theme-light, .theme-dark {
-  --background-primary: #f5f8fd;
-  --background-secondary: #eaf0f9;
-  --background-secondary-alt: #e4edf9;
-  --background-tertiary: #dfe9f7;
-  --background-floating: #f7faff;
-  --background-base-lowest: #e4edf9;
-  --background-base-lower: #eaf0f9;
-  --background-base-low: #f2f6fc;
-  --background-surface-high: #f7faff;
-  --background-surface-higher: #ffffff;
-  --background-mod-subtle: rgba(0,122,255,.06);
-  --background-modifier-hover: rgba(0,122,255,.08);
-  --background-modifier-selected: rgba(0,122,255,.15);
-  --text-normal: #1d2028;
-  --text-primary: #1d2028;
-  --text-muted: #5f6f86;
-  --text-secondary: #5f6f86;
-  --header-primary: #1d2028;
-  --header-secondary: #5f6f86;
-  --channels-default: #52657e;
-  --interactive-normal: #52657e;
-  --interactive-hover: #1d2028;
-  --interactive-active: #0068e0;
-  --brand-500: #0068e0;
-  --brand-experiment: #0068e0;
-  --channeltextarea-background: #ffffff;
-  --input-background: #ffffff;
-  --scrollbar-auto-thumb: #a2b8d7;
-  --scrollbar-auto-track: transparent;
+:root, .theme-light, .theme-dark {
+ color-scheme: dark;
+ --background-primary: #080b10; --background-secondary: #0d1219; --background-secondary-alt: #151b23;
+ --background-tertiary: #080b10; --background-floating: #151b23;
+ --background-base-lowest: #080b10; --background-base-lower: #0d1219; --background-base-low: #151b23;
+ --background-surface-high: #151b23; --background-surface-higher: #2a3543;
+ --background-mod-subtle: rgba(185,204,220,.06); --background-modifier-hover: rgba(185,204,220,.08);
+ --background-modifier-selected: rgba(185,204,220,.14);
+ --text-normal: #edf2f7; --text-primary: #edf2f7; --text-muted: #afbdc9; --text-secondary: #afbdc9;
+ --header-primary: #edf2f7; --header-secondary: #afbdc9; --channels-default: #afbdc9;
+ --interactive-normal: #afbdc9; --interactive-hover: #edf2f7; --interactive-active: #b9ccdc;
+ --brand-500: #b9ccdc; --brand-experiment: #b9ccdc; --brand-560: #e3edf5;
+ --brand-experiment-500: #b9ccdc; --brand-experiment-560: #e3edf5;
+ --white: #edf2f7; --button-filled-brand-text: #080b10;
+ --button-filled-brand-background: #b9ccdc; --button-filled-brand-background-hover: #e3edf5;
+ --channeltextarea-background: #151b23; --input-background: #0d1219;
+ --scrollbar-auto-thumb: #73889c; --scrollbar-auto-track: transparent;
 }
-[class*="sidebar_"] { border-right: 1px solid rgba(255,255,255,.75); }
-[class*="chatContent_"] { background: linear-gradient(145deg,#fafdff,#f0f5fc); }
-[class*="channelTextArea_"] { border: 1px solid #c9d9ef; border-radius: 16px; box-shadow: 0 3px 12px rgba(43,71,117,.06); }
-[role="dialog"], [role="menu"] { border: 1px solid rgba(255,255,255,.85); border-radius: 16px; box-shadow: 0 12px 40px rgba(38,65,110,.15); }
+[class*="sidebar_"] { background: #0d1219; border-right: 1px solid #2b3442; }
+[class*="chatContent_"] { background: linear-gradient(145deg,#151b23,#080b10); }
+[class*="channelTextArea_"] { background: #151b23; border: 1px solid #73889c; border-radius: 21px; box-shadow: inset 0 1px rgba(227,237,245,.16); }
+[class*="button_"][class*="colorBrand_"] { background: linear-gradient(145deg,#e3edf5,#b9ccdc); color: #080b10; }
+[class*="button_"][class*="colorBrand_"] [class*="contents_"] { color: #080b10; }
+[role="dialog"], [role="menu"] { background: #151b23; color: #edf2f7; border: 1px solid #73889c; border-radius: 21px; box-shadow: inset 0 1px rgba(227,237,245,.16), 0 12px 40px rgba(0,0,0,.3); }

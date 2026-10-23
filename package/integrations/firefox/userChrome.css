@@ -1,52 +1,36 @@
-/* Liquid Glass browser chrome. Web pages and security indicators stay intact. */
+
+/* Vitalux Liquid Silver browser chrome. Security indicators remain visible. */
 :root {
-  --lg-ink: #1d2028;
-  --lg-line: rgba(255,255,255,.8);
-  --toolbar-bgcolor: #f1f5fb !important;
-  --toolbar-color: var(--lg-ink) !important;
-  --lwt-accent-color: #e9f0fb !important;
-  --lwt-text-color: var(--lg-ink) !important;
-  --lwt-toolbarbutton-icon-fill: #364156 !important;
-  --toolbarbutton-border-radius: 12px !important;
-  --tab-border-radius: 12px !important;
-  --tab-selected-bgcolor: rgba(255,255,255,.94) !important;
-  --urlbarView-highlight-background: #0068e0 !important;
-  --urlbarView-highlight-color: white !important;
+ color-scheme: dark !important;
+ --lg-ink: #edf2f7; --lg-line: #73889c;
+ --toolbar-bgcolor: #0d1219 !important; --toolbar-color: #edf2f7 !important;
+ --lwt-accent-color: #080b10 !important; --lwt-text-color: #edf2f7 !important;
+ --lwt-toolbarbutton-icon-fill: #afbdc9 !important;
+ --toolbarbutton-border-radius: 12px !important; --tab-border-radius: 12px !important;
+ --tab-selected-bgcolor: #151b23 !important; --tab-selected-textcolor: #edf2f7 !important;
+ --urlbarView-highlight-background: #b9ccdc !important; --urlbarView-highlight-color: #080b10 !important;
+ --arrowpanel-background: #151b23 !important; --arrowpanel-color: #edf2f7 !important;
+ --arrowpanel-border-color: #73889c !important; --panel-background: #151b23 !important;
+ --panel-color: #edf2f7 !important; --autocomplete-popup-background: #151b23 !important;
+ --autocomplete-popup-color: #edf2f7 !important; --autocomplete-popup-highlight-background: #b9ccdc !important;
+ --autocomplete-popup-highlight-color: #080b10 !important;
 }
 #navigator-toolbox {
-  background: linear-gradient(160deg,rgba(255,255,255,.94),rgba(229,238,251,.93)) !important;
-  border-bottom: 1px solid rgba(158,181,213,.48) !important;
-  color: var(--lg-ink) !important;
+ background: linear-gradient(145deg,#151b23,#080b10) !important; color: #edf2f7 !important;
+ border-bottom: 1px solid #73889c !important; box-shadow: inset 0 1px rgba(227,237,245,.16) !important;
 }
-#TabsToolbar, #nav-bar, #PersonalToolbar {
-  background: transparent !important;
-  color: var(--lg-ink) !important;
-}
+#TabsToolbar, #nav-bar, #PersonalToolbar { background: transparent !important; color: #edf2f7 !important; }
 #nav-bar { padding-block: 5px !important; box-shadow: none !important; }
-.tab-background {
-  border: 1px solid transparent !important;
-  transition: background-color 160ms ease, box-shadow 160ms ease !important;
-}
-.tab-background[selected] {
-  border-color: var(--lg-line) !important;
-  box-shadow: 0 2px 8px rgba(43,71,117,.10), inset 0 1px rgba(255,255,255,.9) !important;
-}
-.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected]) {
-  background: rgba(255,255,255,.50) !important;
-}
-.tab-label, #urlbar-input { color: var(--lg-ink) !important; }
+.tab-background { border: 1px solid transparent !important; transition: background-color 160ms ease, border-color 160ms ease !important; }
+.tab-background[selected] { background: linear-gradient(145deg,#2a3543,#0d1219) !important; border-color: #73889c !important; box-shadow: inset 0 1px rgba(227,237,245,.22) !important; }
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected]) { background: #151b23 !important; }
+.tab-label, #urlbar-input, #searchbar { color: #edf2f7 !important; }
 #urlbar-background, #searchbar {
-  background: rgba(255,255,255,.93) !important;
-  border: 1px solid rgba(175,195,223,.65) !important;
-  border-radius: 14px !important;
-  box-shadow: inset 0 1px rgba(255,255,255,.95), 0 2px 8px rgba(30,70,130,.05) !important;
+ background: #0d1219 !important; border: 1px solid #73889c !important; border-radius: 12px !important;
+ box-shadow: inset 0 1px rgba(227,237,245,.10) !important;
 }
-#urlbar[focused] > #urlbar-background {
-  border-color: #007aff !important;
-  box-shadow: 0 0 0 2px rgba(0,122,255,.17) !important;
-}
-.urlbarView { color: var(--lg-ink) !important; }
-.urlbarView-row-inner { border-radius: 10px !important; }
-@media (prefers-reduced-motion: reduce) {
-  .tab-background { transition: none !important; }
-}
+#urlbar[focused] > #urlbar-background { border-color: #b9ccdc !important; box-shadow: 0 0 0 2px rgba(185,204,220,.14) !important; }
+.urlbarView { background: #151b23 !important; color: #edf2f7 !important; }
+.urlbarView-row-inner { border-radius: 12px !important; }
+menupopup, panel { --panel-background: #151b23; --panel-color: #edf2f7; }
+@media (prefers-reduced-motion: reduce) { .tab-background { transition: none !important; } }

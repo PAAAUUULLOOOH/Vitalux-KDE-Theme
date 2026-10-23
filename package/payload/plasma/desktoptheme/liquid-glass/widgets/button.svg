@@ -1,99 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="380" height="200" viewBox="0 0 380 200">
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="200" viewBox="0 0 380 200">
 <defs>
- <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".86"/><stop offset=".47" stop-color="#f6f9ff" stop-opacity=".62"/><stop offset="1" stop-color="#e9eef9" stop-opacity=".74"/></linearGradient>
- <linearGradient id="rim" x2=".8" y2="1"><stop stop-color="#ffffff" stop-opacity=".98"/><stop offset=".45" stop-color="#ffffff" stop-opacity=".34"/><stop offset="1" stop-color="#b6c8df" stop-opacity=".62"/></linearGradient>
- <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#399aff"/><stop offset="1" stop-color="#007aff"/></linearGradient>
- <linearGradient id="quiet" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".74"/><stop offset="1" stop-color="#e5ebf4" stop-opacity=".65"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop offset="0" stop-color="#151b23" stop-opacity="0.654902" /><stop offset="0.45" stop-color="#080b10" stop-opacity="0.792157" /><stop offset="1" stop-color="#151b23" stop-opacity="0.823529" /></linearGradient>
+ <linearGradient id="rim" x2=".8" y2="1"><stop offset="0" stop-color="#e3edf5" stop-opacity="0.490196" /><stop offset="0.18" stop-color="#b9ccdc" stop-opacity="0.352941" /><stop offset="0.4" stop-color="#73889c" stop-opacity="0.192157" /><stop offset="0.62" stop-color="#b9ccdc" stop-opacity="0.243137" /><stop offset="0.83" stop-color="#73889c" stop-opacity="0.149020" /><stop offset="1" stop-color="#e3edf5" stop-opacity="0.321569" /></linearGradient>
+ <linearGradient id="blue" x2="0" y2="1"><stop offset="0" stop-color="#e3edf5" stop-opacity="1.000000" /><stop offset="1" stop-color="#b9ccdc" stop-opacity="1.000000" /></linearGradient>
+ <linearGradient id="quiet" x2="0" y2="1"><stop offset="0" stop-color="#151b23" stop-opacity="0.654902" /><stop offset="0.45" stop-color="#080b10" stop-opacity="0.792157" /><stop offset="1" stop-color="#151b23" stop-opacity="0.823529" /></linearGradient>
 </defs>
-<g id="normal-center" transform="translate(0 0)"><rect x="8" y="8" width="48" height="48" fill="url(#quiet)"/></g>
-<g id="normal-top" transform="translate(0 0)"><path d="M8 8V.5H56V8Z" fill="url(#quiet)"/><path d="M8 .5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="normal-bottom" transform="translate(0 0)"><path d="M8 56H56V63.5H8Z" fill="url(#quiet)"/><path d="M8 63.5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="normal-left" transform="translate(0 0)"><path d="M8 8H.5V56H8Z" fill="url(#quiet)"/><path d="M.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="normal-right" transform="translate(0 0)"><path d="M56 8H63.5V56H56Z" fill="url(#quiet)"/><path d="M63.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="normal-topleft" transform="translate(0 0)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="url(#quiet)"/><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)"/></g>
-<g id="normal-topright" transform="translate(0 0)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="url(#quiet)"/><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)"/></g>
-<g id="normal-bottomleft" transform="translate(0 0)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="url(#quiet)"/><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)"/></g>
-<g id="normal-bottomright" transform="translate(0 0)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="url(#quiet)"/><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)"/></g>
-<rect id="normal-hint-top-margin" x="66" y="0" width="8" height="8" fill="#f00"/>
-<rect id="normal-hint-bottom-margin" x="66" y="0" width="8" height="8" fill="#f00"/>
-<rect id="normal-hint-left-margin" x="66" y="0" width="8" height="8" fill="#f00"/>
-<rect id="normal-hint-right-margin" x="66" y="0" width="8" height="8" fill="#f00"/>
-<g id="hover-center" transform="translate(90 0)"><rect x="8" y="8" width="48" height="48" fill="#ffffff"/></g>
-<g id="hover-top" transform="translate(90 0)"><path d="M8 8V.5H56V8Z" fill="#ffffff"/><path d="M8 .5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="hover-bottom" transform="translate(90 0)"><path d="M8 56H56V63.5H8Z" fill="#ffffff"/><path d="M8 63.5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="hover-left" transform="translate(90 0)"><path d="M8 8H.5V56H8Z" fill="#ffffff"/><path d="M.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="hover-right" transform="translate(90 0)"><path d="M56 8H63.5V56H56Z" fill="#ffffff"/><path d="M63.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="hover-topleft" transform="translate(90 0)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="#ffffff"/><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)"/></g>
-<g id="hover-topright" transform="translate(90 0)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="#ffffff"/><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)"/></g>
-<g id="hover-bottomleft" transform="translate(90 0)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="#ffffff"/><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)"/></g>
-<g id="hover-bottomright" transform="translate(90 0)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="#ffffff"/><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)"/></g>
-<rect id="hover-hint-top-margin" x="156" y="0" width="8" height="8" fill="#f00"/>
-<rect id="hover-hint-bottom-margin" x="156" y="0" width="8" height="8" fill="#f00"/>
-<rect id="hover-hint-left-margin" x="156" y="0" width="8" height="8" fill="#f00"/>
-<rect id="hover-hint-right-margin" x="156" y="0" width="8" height="8" fill="#f00"/>
-<g id="pressed-center" transform="translate(180 0)"><rect x="8" y="8" width="48" height="48" fill="#d5e6fb"/></g>
-<g id="pressed-top" transform="translate(180 0)"><path d="M8 8V.5H56V8Z" fill="#d5e6fb"/><path d="M8 .5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="pressed-bottom" transform="translate(180 0)"><path d="M8 56H56V63.5H8Z" fill="#d5e6fb"/><path d="M8 63.5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="pressed-left" transform="translate(180 0)"><path d="M8 8H.5V56H8Z" fill="#d5e6fb"/><path d="M.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="pressed-right" transform="translate(180 0)"><path d="M56 8H63.5V56H56Z" fill="#d5e6fb"/><path d="M63.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="pressed-topleft" transform="translate(180 0)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="#d5e6fb"/><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)"/></g>
-<g id="pressed-topright" transform="translate(180 0)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="#d5e6fb"/><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)"/></g>
-<g id="pressed-bottomleft" transform="translate(180 0)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="#d5e6fb"/><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)"/></g>
-<g id="pressed-bottomright" transform="translate(180 0)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="#d5e6fb"/><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)"/></g>
-<rect id="pressed-hint-top-margin" x="246" y="0" width="8" height="8" fill="#f00"/>
-<rect id="pressed-hint-bottom-margin" x="246" y="0" width="8" height="8" fill="#f00"/>
-<rect id="pressed-hint-left-margin" x="246" y="0" width="8" height="8" fill="#f00"/>
-<rect id="pressed-hint-right-margin" x="246" y="0" width="8" height="8" fill="#f00"/>
-<g id="focus-center" transform="translate(270 0)"><rect x="8" y="8" width="48" height="48" fill="#c8e1ff"/></g>
-<g id="focus-top" transform="translate(270 0)"><path d="M8 8V.5H56V8Z" fill="#c8e1ff"/><path d="M8 .5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="focus-bottom" transform="translate(270 0)"><path d="M8 56H56V63.5H8Z" fill="#c8e1ff"/><path d="M8 63.5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="focus-left" transform="translate(270 0)"><path d="M8 8H.5V56H8Z" fill="#c8e1ff"/><path d="M.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="focus-right" transform="translate(270 0)"><path d="M56 8H63.5V56H56Z" fill="#c8e1ff"/><path d="M63.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="focus-topleft" transform="translate(270 0)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="#c8e1ff"/><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)"/></g>
-<g id="focus-topright" transform="translate(270 0)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="#c8e1ff"/><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)"/></g>
-<g id="focus-bottomleft" transform="translate(270 0)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="#c8e1ff"/><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)"/></g>
-<g id="focus-bottomright" transform="translate(270 0)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="#c8e1ff"/><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)"/></g>
-<rect id="focus-hint-top-margin" x="336" y="0" width="8" height="8" fill="#f00"/>
-<rect id="focus-hint-bottom-margin" x="336" y="0" width="8" height="8" fill="#f00"/>
-<rect id="focus-hint-left-margin" x="336" y="0" width="8" height="8" fill="#f00"/>
-<rect id="focus-hint-right-margin" x="336" y="0" width="8" height="8" fill="#f00"/>
-<g id="toolbutton-normal-center" transform="translate(0 90)"><rect x="8" y="8" width="48" height="48" fill="url(#quiet)"/></g>
-<g id="toolbutton-normal-top" transform="translate(0 90)"><path d="M8 8V.5H56V8Z" fill="url(#quiet)"/><path d="M8 .5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-normal-bottom" transform="translate(0 90)"><path d="M8 56H56V63.5H8Z" fill="url(#quiet)"/><path d="M8 63.5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-normal-left" transform="translate(0 90)"><path d="M8 8H.5V56H8Z" fill="url(#quiet)"/><path d="M.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-normal-right" transform="translate(0 90)"><path d="M56 8H63.5V56H56Z" fill="url(#quiet)"/><path d="M63.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-normal-topleft" transform="translate(0 90)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="url(#quiet)"/><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-normal-topright" transform="translate(0 90)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="url(#quiet)"/><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-normal-bottomleft" transform="translate(0 90)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="url(#quiet)"/><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-normal-bottomright" transform="translate(0 90)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="url(#quiet)"/><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)"/></g>
-<rect id="toolbutton-normal-hint-top-margin" x="66" y="90" width="8" height="8" fill="#f00"/>
-<rect id="toolbutton-normal-hint-bottom-margin" x="66" y="90" width="8" height="8" fill="#f00"/>
-<rect id="toolbutton-normal-hint-left-margin" x="66" y="90" width="8" height="8" fill="#f00"/>
-<rect id="toolbutton-normal-hint-right-margin" x="66" y="90" width="8" height="8" fill="#f00"/>
-<g id="toolbutton-hover-center" transform="translate(90 90)"><rect x="8" y="8" width="48" height="48" fill="#ffffff"/></g>
-<g id="toolbutton-hover-top" transform="translate(90 90)"><path d="M8 8V.5H56V8Z" fill="#ffffff"/><path d="M8 .5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-hover-bottom" transform="translate(90 90)"><path d="M8 56H56V63.5H8Z" fill="#ffffff"/><path d="M8 63.5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-hover-left" transform="translate(90 90)"><path d="M8 8H.5V56H8Z" fill="#ffffff"/><path d="M.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-hover-right" transform="translate(90 90)"><path d="M56 8H63.5V56H56Z" fill="#ffffff"/><path d="M63.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-hover-topleft" transform="translate(90 90)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="#ffffff"/><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-hover-topright" transform="translate(90 90)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="#ffffff"/><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-hover-bottomleft" transform="translate(90 90)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="#ffffff"/><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-hover-bottomright" transform="translate(90 90)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="#ffffff"/><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)"/></g>
-<rect id="toolbutton-hover-hint-top-margin" x="156" y="90" width="8" height="8" fill="#f00"/>
-<rect id="toolbutton-hover-hint-bottom-margin" x="156" y="90" width="8" height="8" fill="#f00"/>
-<rect id="toolbutton-hover-hint-left-margin" x="156" y="90" width="8" height="8" fill="#f00"/>
-<rect id="toolbutton-hover-hint-right-margin" x="156" y="90" width="8" height="8" fill="#f00"/>
-<g id="toolbutton-pressed-center" transform="translate(180 90)"><rect x="8" y="8" width="48" height="48" fill="#d5e6fb"/></g>
-<g id="toolbutton-pressed-top" transform="translate(180 90)"><path d="M8 8V.5H56V8Z" fill="#d5e6fb"/><path d="M8 .5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-pressed-bottom" transform="translate(180 90)"><path d="M8 56H56V63.5H8Z" fill="#d5e6fb"/><path d="M8 63.5H56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-pressed-left" transform="translate(180 90)"><path d="M8 8H.5V56H8Z" fill="#d5e6fb"/><path d="M.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-pressed-right" transform="translate(180 90)"><path d="M56 8H63.5V56H56Z" fill="#d5e6fb"/><path d="M63.5 8V56" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-pressed-topleft" transform="translate(180 90)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="#d5e6fb"/><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-pressed-topright" transform="translate(180 90)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="#d5e6fb"/><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-pressed-bottomleft" transform="translate(180 90)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="#d5e6fb"/><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)"/></g>
-<g id="toolbutton-pressed-bottomright" transform="translate(180 90)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="#d5e6fb"/><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)"/></g>
-<rect id="toolbutton-pressed-hint-top-margin" x="246" y="90" width="8" height="8" fill="#f00"/>
-<rect id="toolbutton-pressed-hint-bottom-margin" x="246" y="90" width="8" height="8" fill="#f00"/>
-<rect id="toolbutton-pressed-hint-left-margin" x="246" y="90" width="8" height="8" fill="#f00"/>
-<rect id="toolbutton-pressed-hint-right-margin" x="246" y="90" width="8" height="8" fill="#f00"/>
+<g id="normal-center" transform="translate(0 0)"><rect x="8" y="8" width="48" height="48" fill="url(#quiet)" /></g>
+<g id="normal-top" transform="translate(0 0)"><path d="M8 8V.5H56V8Z" fill="url(#quiet)" /><path d="M8 .5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="normal-bottom" transform="translate(0 0)"><path d="M8 56H56V63.5H8Z" fill="url(#quiet)" /><path d="M8 63.5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="normal-left" transform="translate(0 0)"><path d="M8 8H.5V56H8Z" fill="url(#quiet)" /><path d="M.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="normal-right" transform="translate(0 0)"><path d="M56 8H63.5V56H56Z" fill="url(#quiet)" /><path d="M63.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="normal-topleft" transform="translate(0 0)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="url(#quiet)" /><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)" /></g>
+<g id="normal-topright" transform="translate(0 0)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="url(#quiet)" /><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)" /></g>
+<g id="normal-bottomleft" transform="translate(0 0)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="url(#quiet)" /><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)" /></g>
+<g id="normal-bottomright" transform="translate(0 0)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="url(#quiet)" /><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)" /></g>
+<rect id="normal-hint-top-margin" x="66" y="0" width="8" height="8" fill="#f00" />
+<rect id="normal-hint-bottom-margin" x="66" y="0" width="8" height="8" fill="#f00" />
+<rect id="normal-hint-left-margin" x="66" y="0" width="8" height="8" fill="#f00" />
+<rect id="normal-hint-right-margin" x="66" y="0" width="8" height="8" fill="#f00" />
+<g id="hover-center" transform="translate(90 0)"><rect x="8" y="8" width="48" height="48" fill="#151b23" /></g>
+<g id="hover-top" transform="translate(90 0)"><path d="M8 8V.5H56V8Z" fill="#151b23" /><path d="M8 .5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="hover-bottom" transform="translate(90 0)"><path d="M8 56H56V63.5H8Z" fill="#151b23" /><path d="M8 63.5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="hover-left" transform="translate(90 0)"><path d="M8 8H.5V56H8Z" fill="#151b23" /><path d="M.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="hover-right" transform="translate(90 0)"><path d="M56 8H63.5V56H56Z" fill="#151b23" /><path d="M63.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="hover-topleft" transform="translate(90 0)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="#151b23" /><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)" /></g>
+<g id="hover-topright" transform="translate(90 0)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="#151b23" /><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)" /></g>
+<g id="hover-bottomleft" transform="translate(90 0)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="#151b23" /><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)" /></g>
+<g id="hover-bottomright" transform="translate(90 0)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="#151b23" /><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)" /></g>
+<rect id="hover-hint-top-margin" x="156" y="0" width="8" height="8" fill="#f00" />
+<rect id="hover-hint-bottom-margin" x="156" y="0" width="8" height="8" fill="#f00" />
+<rect id="hover-hint-left-margin" x="156" y="0" width="8" height="8" fill="#f00" />
+<rect id="hover-hint-right-margin" x="156" y="0" width="8" height="8" fill="#f00" />
+<g id="pressed-center" transform="translate(180 0)"><rect x="8" y="8" width="48" height="48" fill="#2a3543" /></g>
+<g id="pressed-top" transform="translate(180 0)"><path d="M8 8V.5H56V8Z" fill="#2a3543" /><path d="M8 .5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="pressed-bottom" transform="translate(180 0)"><path d="M8 56H56V63.5H8Z" fill="#2a3543" /><path d="M8 63.5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="pressed-left" transform="translate(180 0)"><path d="M8 8H.5V56H8Z" fill="#2a3543" /><path d="M.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="pressed-right" transform="translate(180 0)"><path d="M56 8H63.5V56H56Z" fill="#2a3543" /><path d="M63.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="pressed-topleft" transform="translate(180 0)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="#2a3543" /><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)" /></g>
+<g id="pressed-topright" transform="translate(180 0)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="#2a3543" /><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)" /></g>
+<g id="pressed-bottomleft" transform="translate(180 0)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="#2a3543" /><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)" /></g>
+<g id="pressed-bottomright" transform="translate(180 0)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="#2a3543" /><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)" /></g>
+<rect id="pressed-hint-top-margin" x="246" y="0" width="8" height="8" fill="#f00" />
+<rect id="pressed-hint-bottom-margin" x="246" y="0" width="8" height="8" fill="#f00" />
+<rect id="pressed-hint-left-margin" x="246" y="0" width="8" height="8" fill="#f00" />
+<rect id="pressed-hint-right-margin" x="246" y="0" width="8" height="8" fill="#f00" />
+<g id="focus-center" transform="translate(270 0)"><rect x="8" y="8" width="48" height="48" fill="#2a3543" /></g>
+<g id="focus-top" transform="translate(270 0)"><path d="M8 8V.5H56V8Z" fill="#2a3543" /><path d="M8 .5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="focus-bottom" transform="translate(270 0)"><path d="M8 56H56V63.5H8Z" fill="#2a3543" /><path d="M8 63.5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="focus-left" transform="translate(270 0)"><path d="M8 8H.5V56H8Z" fill="#2a3543" /><path d="M.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="focus-right" transform="translate(270 0)"><path d="M56 8H63.5V56H56Z" fill="#2a3543" /><path d="M63.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="focus-topleft" transform="translate(270 0)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="#2a3543" /><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)" /></g>
+<g id="focus-topright" transform="translate(270 0)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="#2a3543" /><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)" /></g>
+<g id="focus-bottomleft" transform="translate(270 0)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="#2a3543" /><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)" /></g>
+<g id="focus-bottomright" transform="translate(270 0)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="#2a3543" /><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)" /></g>
+<rect id="focus-hint-top-margin" x="336" y="0" width="8" height="8" fill="#f00" />
+<rect id="focus-hint-bottom-margin" x="336" y="0" width="8" height="8" fill="#f00" />
+<rect id="focus-hint-left-margin" x="336" y="0" width="8" height="8" fill="#f00" />
+<rect id="focus-hint-right-margin" x="336" y="0" width="8" height="8" fill="#f00" />
+<g id="toolbutton-normal-center" transform="translate(0 90)"><rect x="8" y="8" width="48" height="48" fill="url(#quiet)" /></g>
+<g id="toolbutton-normal-top" transform="translate(0 90)"><path d="M8 8V.5H56V8Z" fill="url(#quiet)" /><path d="M8 .5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-normal-bottom" transform="translate(0 90)"><path d="M8 56H56V63.5H8Z" fill="url(#quiet)" /><path d="M8 63.5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-normal-left" transform="translate(0 90)"><path d="M8 8H.5V56H8Z" fill="url(#quiet)" /><path d="M.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-normal-right" transform="translate(0 90)"><path d="M56 8H63.5V56H56Z" fill="url(#quiet)" /><path d="M63.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-normal-topleft" transform="translate(0 90)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="url(#quiet)" /><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-normal-topright" transform="translate(0 90)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="url(#quiet)" /><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-normal-bottomleft" transform="translate(0 90)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="url(#quiet)" /><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-normal-bottomright" transform="translate(0 90)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="url(#quiet)" /><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)" /></g>
+<rect id="toolbutton-normal-hint-top-margin" x="66" y="90" width="8" height="8" fill="#f00" />
+<rect id="toolbutton-normal-hint-bottom-margin" x="66" y="90" width="8" height="8" fill="#f00" />
+<rect id="toolbutton-normal-hint-left-margin" x="66" y="90" width="8" height="8" fill="#f00" />
+<rect id="toolbutton-normal-hint-right-margin" x="66" y="90" width="8" height="8" fill="#f00" />
+<g id="toolbutton-hover-center" transform="translate(90 90)"><rect x="8" y="8" width="48" height="48" fill="#151b23" /></g>
+<g id="toolbutton-hover-top" transform="translate(90 90)"><path d="M8 8V.5H56V8Z" fill="#151b23" /><path d="M8 .5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-hover-bottom" transform="translate(90 90)"><path d="M8 56H56V63.5H8Z" fill="#151b23" /><path d="M8 63.5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-hover-left" transform="translate(90 90)"><path d="M8 8H.5V56H8Z" fill="#151b23" /><path d="M.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-hover-right" transform="translate(90 90)"><path d="M56 8H63.5V56H56Z" fill="#151b23" /><path d="M63.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-hover-topleft" transform="translate(90 90)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="#151b23" /><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-hover-topright" transform="translate(90 90)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="#151b23" /><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-hover-bottomleft" transform="translate(90 90)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="#151b23" /><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-hover-bottomright" transform="translate(90 90)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="#151b23" /><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)" /></g>
+<rect id="toolbutton-hover-hint-top-margin" x="156" y="90" width="8" height="8" fill="#f00" />
+<rect id="toolbutton-hover-hint-bottom-margin" x="156" y="90" width="8" height="8" fill="#f00" />
+<rect id="toolbutton-hover-hint-left-margin" x="156" y="90" width="8" height="8" fill="#f00" />
+<rect id="toolbutton-hover-hint-right-margin" x="156" y="90" width="8" height="8" fill="#f00" />
+<g id="toolbutton-pressed-center" transform="translate(180 90)"><rect x="8" y="8" width="48" height="48" fill="#2a3543" /></g>
+<g id="toolbutton-pressed-top" transform="translate(180 90)"><path d="M8 8V.5H56V8Z" fill="#2a3543" /><path d="M8 .5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-pressed-bottom" transform="translate(180 90)"><path d="M8 56H56V63.5H8Z" fill="#2a3543" /><path d="M8 63.5H56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-pressed-left" transform="translate(180 90)"><path d="M8 8H.5V56H8Z" fill="#2a3543" /><path d="M.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-pressed-right" transform="translate(180 90)"><path d="M56 8H63.5V56H56Z" fill="#2a3543" /><path d="M63.5 8V56" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-pressed-topleft" transform="translate(180 90)"><path d="M8 8H.5Q.5 .5 8 .5Z" fill="#2a3543" /><path d="M.5 8Q.5 .5 8 .5" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-pressed-topright" transform="translate(180 90)"><path d="M56 8V.5Q63.5 .5 63.5 8Z" fill="#2a3543" /><path d="M56 .5Q63.5 .5 63.5 8" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-pressed-bottomleft" transform="translate(180 90)"><path d="M8 56V63.5Q.5 63.5 .5 56Z" fill="#2a3543" /><path d="M.5 56Q.5 63.5 8 63.5" fill="none" stroke="url(#rim)" /></g>
+<g id="toolbutton-pressed-bottomright" transform="translate(180 90)"><path d="M56 56H63.5Q63.5 63.5 56 63.5Z" fill="#2a3543" /><path d="M63.5 56Q63.5 63.5 56 63.5" fill="none" stroke="url(#rim)" /></g>
+<rect id="toolbutton-pressed-hint-top-margin" x="246" y="90" width="8" height="8" fill="#f00" />
+<rect id="toolbutton-pressed-hint-bottom-margin" x="246" y="90" width="8" height="8" fill="#f00" />
+<rect id="toolbutton-pressed-hint-left-margin" x="246" y="90" width="8" height="8" fill="#f00" />
+<rect id="toolbutton-pressed-hint-right-margin" x="246" y="90" width="8" height="8" fill="#f00" />
 </svg>

@@ -1,56 +1,41 @@
-# Liquid Glass für openSUSE
+# Vitalux Liquid Silver für KDE
 
-Theme-Paket für **openSUSE Tumbleweed, Plasma/KWin 6.8.x, Wayland und x86_64**. Enthalten sind globales Design, shaderbasierte Glasbrechung, Qt-/GTK-Styles, Fensterrahmen, Cursor, Icons, 4K-Hintergrund, Startanimation, SDDM-Design und App-Anpassungen.
+Für **openSUSE Tumbleweed, Plasma/KWin 6.8.x, Wayland und x86_64**. Vorlage ist das originale **Liquid Silver** aus Vitalux: dunkles Rauchglas, Silberfarben, Lichtkanten und der originale Hintergrund. Die Farben und Materialwerte sind aus dem Vitalux-Code übernommen; das verlustfreie 4K-Referenzbild stimmt Pixel für Pixel mit dessen Zeichenfunktion überein.
 
 ## Installieren
 
-ZIP vollständig entpacken, Discord und Steam schließen und ein Terminal im entpackten Ordner öffnen. Ohne sudo starten:
+ZIP vollständig entpacken, Discord und Steam schließen und im entpackten Ordner ein Terminal öffnen:
 
-    bash install.sh
+```bash
+bash install.sh
+```
 
-Der Installer prüft das Paket, installiert Build-Pakete aus deinen eingerichteten openSUSE-Quellen und baut den Glaseffekt passend zu deiner KWin-Version. Für Systemdateien fragt er gezielt nach dem sudo-Passwort. Internetzugang wird für Abhängigkeiten und fehlende App-Erweiterungen benötigt.
+Ohne vorangestelltes sudo starten. Der Installer prüft die ZIP-Inhalte, sichert die bisherigen Einstellungen, installiert benötigte Build-Pakete aus deinen openSUSE-Quellen und baut den Glaseffekt passend zu KWin. Für Systemdateien fragt er nach dem sudo-Passwort. Internet wird benötigt. Fehlende Discord-/Steam-Loader (Vencord/Millennium) werden vorab erklärt und benötigen deine Bestätigung.
 
-Wenn Discord/Steam noch keinen Theme-Loader haben, werden Vencord bzw. Millennium vorab erklärt und erst nach deiner Bestätigung eingerichtet. Offizielle Release-Downloads werden per SHA-256 geprüft. Vorhandene Loader werden übernommen; normale/Flatpak-Installationen werden erkannt.
+Danach einmal ab- und wieder anmelden. Es werden keine Programme zwangsweise beendet.
 
-Danach einmal ab- und wieder anmelden. Es werden keine Programme zwangsweise beendet und kein Displaymanager neu gestartet.
+```bash
+bash install.sh --check       # Nur prüfen
+bash install.sh --no-firefox  # Firefox-Oberfläche beibehalten
+bash uninstall.sh            # Ursprünglichen Zustand wiederherstellen
+```
 
-    # Prüfen, ohne Einstellungen zu ändern:
-    bash install.sh --check
+Beim Wechsel von 1.0.0 einfach den neuen Installer ausführen. Die erste Sicherung bleibt erhalten. Bewahre den entpackten Ordner für die Deinstallation auf.
 
-    # Firefox-Oberfläche unverändert lassen:
-    bash install.sh --no-firefox
+## Enthalten
 
-## Entfernen
+Plasma-Oberflächen, Qt-/GTK3-/GTK4-Steuerelemente, Glasrahmen, Cursor, Originalhintergrund, Startanimation und SDDM-Anmeldedesign. Das installierte openSUSE-Originalsymbol und vorhandene App-Logos werden auf dunkle Glasflächen gesetzt. Firefox, Discord, Steam, TeamSpeak 3, ProtonPlus und Haruna erhalten die passenden unterstützten Farben und Oberflächen. Videos, Webseiten und Sicherheitsanzeigen bleiben unverändert. Die Apps behalten ihren eigenen Aufbau.
 
-    bash uninstall.sh
+Die Vorschaubilder zeigen echte QtQuick-Darstellungen einzelner Komponenten, keine vollständige KDE-Sitzung. Dort ist ein Vorschaumotiv zu sehen; bei der Installation wird das installierte openSUSE-Originalsymbol verwendet.
 
-Die vorherigen Einstellungen und Dateien werden wiederhergestellt. Programme, Konten, Spiele, Passwörter und Browserdaten bleiben erhalten. Spätere eigene Änderungen werden beibehalten. Vorher vorhandene Loader bleiben bestehen; nur durch diesen Installer ergänzte Loader werden zurückgenommen. Steam-Dateien/Symlinks und neu ergänzte Vencord-Freigaben sind berücksichtigt.
+## Rücknahme und Updates
 
-Sicherungen liegen in ~/.local/state/liquid-glass-kde und /var/lib/liquid-glass-kde. Über zypper installierte Build-Pakete bleiben aus Rücksicht auf andere Programme installiert.
+Die Deinstallation stellt gesicherte Dateien/Einstellungen wieder her, berücksichtigt spätere eigene Änderungen und entfernt nur selbst ergänzte App-Loader. Profile, Konten, Spiele und Browserdaten bleiben erhalten. Sicherungen: `~/.local/state/liquid-glass-kde` und `/var/lib/liquid-glass-kde`. Build-Pakete bleiben installiert.
 
-## Anpassungen
+Nach einem KWin-Update bleibt bei unpassender Effekt-Version der native Blur aktiv. Innerhalb 6.8.x den Installer erneut ausführen.
 
-- **Plasma:** Glasflächen mit Brechung und Lichtkanten, blaue Akzente und Fensterrahmen.
-- **openSUSE-Startmenü:** Das installierte Originalsymbol wird übernommen und auf einer Glasfläche dargestellt.
-- **Standard-Apps und Haruna:** Systemfarben, unterstützte Qt-Steuerelemente, Fensterrahmen und Icons. Videos bleiben deckend und scharf.
-- **Cursor:** mehrere Größen bis 96 px und animierte Wartezeiger.
-- **Start/Sperre/Login:** animierte Startansicht; Sperrhintergrund und Systempalette; eigenes Anmeldedesign bei installiertem SDDM. Die native Passwortprüfung bleibt erhalten.
-- **Firefox:** zurücknehmbare Oberfläche in bestehenden nativen/Flatpak-Profilen; Webseiten und Sicherheitsanzeigen bleiben erhalten.
-- **Discord:** Vencord Quick CSS wird eingerichtet und aktiviert. Der offizielle Installer kann bei Flatpak eine begrenzte Freigabe für seinen eigenen Ordner ergänzen; diese wird zur Rücknahme erfasst.
-- **Steam:** Millennium-Skin wird installiert und ausgewählt. Bei Flatpak liegen die Loader-Dateien im eigenen Steam-Verzeichnis; der lokale Starter erhält das passende Argument. Keine allgemeine Home-Freigabe.
-- **TeamSpeak 3:** Stylesheet wird über den Starter geladen. Die Einstellungsdatenbank bleibt erhalten.
-- **ProtonPlus/GTK4:** tatsächliches GTK4-/Libadwaita-Styling, auch im bestehenden ProtonPlus-Flatpak-Profil.
+```bash
+python3 tools/full_install.py status
+```
 
-Vencord und Millennium sind zusätzliche Erweiterungen. Zukünftige Steam-/Discord-Updates können deren Anpassung beeinflussen. Die Darstellung ist eine KDE-Adaption; Apples Betriebssystem und dessen Optik werden nicht vollständig kopiert.
-
-## Nach einem KWin-Update
-
-Der Glaseffekt wird nur bei passender laufender KWin-Version geladen. Bei einer Abweichung bleibt der native Blur aktiv. Nach einem Update innerhalb von 6.8.x install.sh erneut ausführen. Andere Plasma-Versionen werden nicht ungeprüft akzeptiert.
-
-    python3 tools/full_install.py status
-
-Bei einem Fehler wird keine vollständige Installation gemeldet. Sicherungen bleiben zur Wiederholung/Deinstallation erhalten. Es werden keine Community-Repositories angelegt und keine Profile gelöscht.
-
-Prüfungen stehen in VALIDATION.md. Ein vollständiger Build auf openSUSE war hier wegen gesperrter Paketserver nicht möglich; er erfolgt im Installer auf deinem Rechner. Echte Steam-/Discord-Sitzungen, die Flatpak-Loader-Brücke und die SDDM-Anmeldung konnten hier nicht geprüft werden.
-
-Quellen/Lizenzen: THIRD_PARTY_NOTICES.md, LICENSE und vendor/.
+Ein vollständiger Build und eine echte KDE-/Steam-/Discord-/SDDM-Sitzung konnten hier nicht geprüft werden. Tests und Grenzen: VALIDATION.md. Original-Vitalux-Material bleibt unter dessen bisherigem Lizenzhinweis; weitere Lizenzen stehen in LICENSE-NOTICE.md und THIRD_PARTY_NOTICES.md.

@@ -243,7 +243,7 @@ def install(ctx,args):
     apps.configure_glass(ctx,journal,version)
     journal.doc['wallpaper']=(ctx.data/'wallpapers/LiquidGlass/contents/images/3840x2160.jpg').as_uri()
     if snapshot:b.change_desktop(snapshot,journal.doc['wallpaper'])
-    journal.doc['full_install_version']='1.0.0';journal.doc['version']='1.0.0';journal.save()
+    journal.doc['full_install_version']=b.VERSION;journal.doc['version']=b.VERSION;journal.save()
     (ctx.state/'glass.pending').unlink(missing_ok=True)
     b.refresh_desktop()
     print('\n[5/5] Vollständige Installation abgeschlossen. Einmal ab- und anmelden. Danach ist der native Glaseffekt aktiv.',flush=True)
@@ -292,7 +292,7 @@ def main():
     ctx=b.Context.current()
     if args.action=='install':b.verify_package()
     if args.check or args.action=='status':
-        print('Liquid Glass 1.0.0 — Plasma 6.8 / openSUSE Tumbleweed')
+        print('Vitalux Liquid Silver '+b.VERSION+' — Plasma 6.8 / openSUSE Tumbleweed')
         target_ok=True
         try:require_opensuse();print('Zielsystem: OK')
         except RuntimeError as error:

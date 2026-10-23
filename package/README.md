@@ -1,71 +1,66 @@
-# Liquid Glass · openSUSE
+# Vitalux Liquid Silver · KDE
 
-A coordinated KDE theme for **openSUSE Tumbleweed, Plasma/KWin 6.8.x, Wayland and x86_64**. Clear glass, actual shader-based refraction, soft light edges, blue accents and an original 4K wallpaper. Includes the artwork, application integrations and sources for building the matching native components on your machine.
+A KDE adaptation of **Vitalux’s Liquid Silver design** for **openSUSE Tumbleweed, Plasma/KWin 6.8.x, Wayland, x86_64**. Original dark smoked glass, satin-silver accents, soft polished edges and the original Vitalux atmosphere.
 
-This is an independent adaptation of the Liquid Glass visual language. Apple's renderer, proprietary fonts and wallpapers are not included.
+The palette is extracted from Vitalux’s source, rather than approximated. The lossless 4K reference wallpaper is pixel-identical to the original Liquid Silver renderer. Source commit, hashes, material stops and derived control colors are recorded in `design/vitalux.json`.
 
-## Installation
+## Install
 
-Extract the ZIP, close Discord and Steam, and open a terminal in the extracted folder. Run as your normal desktop user:
+Extract the ZIP, close Discord and Steam, then open a terminal in the extracted folder:
 
-    bash install.sh
+```bash
+bash install.sh
+```
 
-The installer checks the archive, installs build dependencies from your configured openSUSE repositories, builds the native components against your installed KWin, saves the original settings and applies the theme. It requests sudo only for system components. Missing Discord/Steam theme loaders are explained and require confirmation before installation. Downloads use pinned official release URLs and SHA-256 verification. Internet access is required.
+Start as your regular desktop user. The installer verifies package hashes, saves the original settings, installs build dependencies from your configured openSUSE repositories and builds the native glass effect against your KWin. It requests sudo for system components. Internet access is required. Missing Vencord/Millennium loaders are explained and require confirmation; pinned downloads are checked with SHA-256.
 
-Log out and back in once. The installer does not terminate your apps or restart the display manager.
+Log out and back in once. The installer does not terminate applications or restart the display manager.
 
-    # Inspect the package and target system:
-    bash install.sh --check
+```bash
+bash install.sh --check        # Check package and target without installing
+bash install.sh --no-firefox   # Keep Firefox chrome unchanged
+bash uninstall.sh             # Restore the previous desktop and app settings
+```
 
-    # Keep Firefox chrome unchanged:
-    bash install.sh --no-firefox
+To replace version 1.0.0, run the new installer directly. The original pre-install backup is retained, so uninstall restores your original desktop rather than the old light theme. Keep the extracted directory for removal.
 
-## Removal
+## Desktop and apps
 
-    bash uninstall.sh
-
-Original user files/settings are journaled in ~/.local/state/liquid-glass-kde (or your XDG state location). System components have a separate root-owned journal in /var/lib/liquid-glass-kde. Uninstall preserves unrelated settings and subsequent manual changes. It restores Steam files/links and the SDDM choice, and removes app loaders added by this installer. Existing loaders are retained. Distribution build dependencies remain installed.
-
-## Included components
-
-| Component | Integration |
+| Component | Included styling |
 |---|---|
-| Global KDE theme | Plasma surfaces, full light palette, consistent blue accent and editable SVG artwork |
-| Glass compositor | Bundled Glass KWin source with Plasma 6.8 compatibility; refraction, blur and specular rim |
-| Qt applications | Kvantum Qt6 theme and style-engine source; existing compatible engines reused |
-| Window decorations | Aurorae glass frames; original Aurorae v2 renderer source if the distro plugin is missing |
-| Icons | Places/file-type artwork and glass presentation of locally installed application/openSUSE icons |
-| Pointer | Original 24/32/48/64/96 px cursors, including animated wait/progress |
-| Startup | Animated splash using the locally installed openSUSE mark |
-| Lock screen | Matching wallpaper and system palette with native Plasma 6.8 authentication |
-| Login | Qt6 SDDM theme with frosted controls, distribution mark, session selector and matching cursor |
-| GTK 3/4 | Rounded styling, named colors and modern libadwaita CSS variables |
+| Plasma | Dark palette, smoked panels/menus, silver selections and polished SVG edges |
+| KWin / Qt | Native blur/refraction effect, Kvantum Qt6 controls, Aurorae glass frames; matching engine sources included |
+| openSUSE and app icons | Installed original symbols on a dark silver-edged glass plate; standard Breeze Dark control icons |
+| Cursor | Multiple sizes through 96 px; silver animated wait/progress indicators |
+| Background | Original Vitalux Liquid Silver atmosphere, exported at 4K |
+| Startup, login, lock | Animated splash, frosted SDDM card, matching lock wallpaper and palette; native authentication retained |
+| KDE apps / Haruna | System colors, supported Qt controls, icons and frames; video stays opaque and sharp |
+| Firefox | Reversible browser chrome in existing native/Flatpak profiles; pages and security indicators retained |
+| Discord | Liquid Silver colors/surfaces through Vencord Quick CSS |
+| Steam | Liquid Silver Millennium skin, automatically selected; native/Flatpak loader integration |
+| TeamSpeak 3 | Matching Qt stylesheet enabled through a user-local desktop entry |
+| ProtonPlus / GTK | GTK3 and GTK4/libadwaita styles, including existing ProtonPlus Flatpak profiles |
 
-Your panel layout, authentication backend and application data are retained.
+Your panel layout and application data stay intact. Applications retain their own structure; the original Vitalux colors, atmosphere and glass material are translated to each supported toolkit. This is not a claim of pixel-identical layouts across independent applications.
 
-## Application integration
+Vencord and Millennium are third-party extensions; future client updates can affect their compatibility. Flatpak Steam uses its own persistent runtime directory and a local launcher argument, without broad filesystem access. Newly added Vencord permissions are tracked for removal.
 
-- **KDE standard apps and Haruna:** system palette, icons, supported Qt styling and glass window frames. Video remains opaque and sharp.
-- **Firefox:** reversible chrome stylesheet in existing native/Flatpak profiles. Web pages, passwords and URL/certificate indicators remain intact.
-- **Discord:** an active Vencord patch is detected; the official loader is added if approved, and the theme is activated through local Quick CSS. The official Flatpak patcher may add a narrow permission for its distribution directory; newly added grants are recorded for removal.
-- **Steam:** a real Millennium skin is installed and selected. Native Steam uses the system loader runtime. Flatpak Steam uses its private persistent Steam directory, relative loader links and a local desktop-entry environment argument, with no broad filesystem permission.
-- **TeamSpeak 3:** Qt's -stylesheet argument selects the theme through a local desktop entry. Its settings database is not rewritten.
-- **ProtonPlus:** actual GTK4/libadwaita styling, including its existing Flatpak profile, plus matching icons and window presentation.
+## Recovery and removal
 
-Vencord and Millennium are third-party extensions, not built-in Discord/Steam features. Future client updates can affect their compatibility. Independently drawn interfaces cannot all become identical to Apple's applications; the supported surfaces, controls, palette and icons are coordinated.
+The installer journals user files/per-key settings in `~/.local/state/liquid-glass-kde` and system components in `/var/lib/liquid-glass-kde`. Uninstall preserves unrelated settings and subsequent manual changes. Previously installed app loaders remain; loaders added by this installer are removed. Distribution build dependencies remain installed.
 
-## KWin upgrades and recovery
+After a KWin update, the startup guard retains native blur if the effect binary no longer matches the running compositor. Rerun `install.sh` after updates within KWin 6.8.x. Other Plasma versions are explicitly rejected.
 
-The startup guard compares the running compositor with the version used to build the effect. After a mismatch or interrupted initial load, it retains native blur instead of loading an incompatible binary. Rerun install.sh after a KWin 6.8 update. Other Plasma versions are explicitly rejected.
+```bash
+python3 tools/full_install.py status
+```
 
-    python3 tools/full_install.py status
+## Reference, validation and licenses
 
-A failed installation is not marked complete. Journals remain available for retry or removal. The installer does not add community repositories, change Steam's update channel, delete profiles or weaken lock-screen authentication.
+The original Vitalux source snapshot and a real Vitalux screenshot are in `reference/vitalux/`. `previews/` contains native QtQuick renders of the KDE login/start components, not a screenshot of a complete Plasma desktop. Their original ring motif is a preview placeholder; installation uses the locally installed openSUSE mark.
 
-## Validation and licenses
+See [VALIDATION.md](VALIDATION.md). Automated tests cover palette/source fidelity, the 1.0.0 upgrade baseline, installation/restoration, profiles, file/path protections and app-loader configuration. Native QML, SVG, cursor and shader checks passed. A complete openSUSE build/session and real Steam/Discord/SDDM login sessions could not be verified here; the target installer builds and reports failures explicitly.
 
-See VALIDATION.md for automated restoration checks, native QtQuick/cursor rendering and OpenGL ES shader compilation. A full native C++ build on openSUSE could not be verified here because its package repositories were inaccessible. The installer builds on the target machine and reports failures. Actual Steam/Discord sessions, the Flatpak loader bridge and the SDDM authentication backend were not exercised here.
-
-Original artwork/scripts: MIT. Bundled sources retain their licenses and copyright notices; see THIRD_PARTY_NOTICES.md and vendor/. Application/distribution marks retain their owners' rights.
+Installer/build scaffolding: MIT. **Vitalux’s original source and derived visual materials retain their existing licensing position**, described in [LICENSE-NOTICE.md](LICENSE-NOTICE.md). Third-party engines keep their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and `vendor/`. Application/distribution marks retain their owners’ rights.
 
 German instructions: [ANLEITUNG.md](ANLEITUNG.md).

@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
 <defs>
- <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".86"/><stop offset=".47" stop-color="#f6f9ff" stop-opacity=".62"/><stop offset="1" stop-color="#e9eef9" stop-opacity=".74"/></linearGradient>
- <linearGradient id="rim" x2=".8" y2="1"><stop stop-color="#ffffff" stop-opacity=".98"/><stop offset=".45" stop-color="#ffffff" stop-opacity=".34"/><stop offset="1" stop-color="#b6c8df" stop-opacity=".62"/></linearGradient>
- <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#399aff"/><stop offset="1" stop-color="#007aff"/></linearGradient>
- <linearGradient id="quiet" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".74"/><stop offset="1" stop-color="#e5ebf4" stop-opacity=".65"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop offset="0" stop-color="#151b23" stop-opacity="0.654902" /><stop offset="0.45" stop-color="#080b10" stop-opacity="0.792157" /><stop offset="1" stop-color="#151b23" stop-opacity="0.823529" /></linearGradient>
+ <linearGradient id="rim" x2=".8" y2="1"><stop offset="0" stop-color="#e3edf5" stop-opacity="0.490196" /><stop offset="0.18" stop-color="#b9ccdc" stop-opacity="0.352941" /><stop offset="0.4" stop-color="#73889c" stop-opacity="0.192157" /><stop offset="0.62" stop-color="#b9ccdc" stop-opacity="0.243137" /><stop offset="0.83" stop-color="#73889c" stop-opacity="0.149020" /><stop offset="1" stop-color="#e3edf5" stop-opacity="0.321569" /></linearGradient>
+ <linearGradient id="blue" x2="0" y2="1"><stop offset="0" stop-color="#e3edf5" stop-opacity="1.000000" /><stop offset="1" stop-color="#b9ccdc" stop-opacity="1.000000" /></linearGradient>
+ <linearGradient id="quiet" x2="0" y2="1"><stop offset="0" stop-color="#151b23" stop-opacity="0.654902" /><stop offset="0.45" stop-color="#080b10" stop-opacity="0.792157" /><stop offset="1" stop-color="#151b23" stop-opacity="0.823529" /></linearGradient>
 </defs>
-<path d="M8 21Q8 17 12 17h15l5 6h21q4 0 4 4v24q0 5-5 5H13q-5 0-5-5Z" fill="#57a6f3" stroke="#b8ddff"/><path d="M9 26h48v25q0 5-5 5H13q-4 0-4-5Z" fill="url(#glass)" stroke="url(#rim)"/><path d="M25 39c-8-1-5-10 1-10 1-11 18-11 19 0 7 0 8 10 0 10Zm8 1v9m-5-4 5 5 5-5" fill="none" stroke="#347dbd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 21Q8 17 12 17h15l5 6h21q4 0 4 4v24q0 5-5 5H13q-5 0-5-5Z" fill="#b9ccdc" stroke="#e3edf5" /><path d="M9 26h48v25q0 5-5 5H13q-4 0-4-5Z" fill="url(#glass)" stroke="url(#rim)" /><path d="M25 39c-8-1-5-10 1-10 1-11 18-11 19 0 7 0 8 10 0 10Zm8 1v9m-5-4 5 5 5-5" fill="none" stroke="#73889c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 </svg>

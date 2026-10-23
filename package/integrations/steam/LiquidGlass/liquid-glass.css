@@ -1,0 +1,45 @@
+/* Liquid Glass — Steam/Millennium. Local UI only; no scripts or imports. */
+:root {
+ --lg-bg: #eff4fc; --lg-view: #f9fcff; --lg-text: #20314c;
+ --lg-muted: #627792; --lg-blue: #007aff; --lg-line: rgba(139,167,205,.35);
+ --gpSystemLightestGrey: #263e5e; --gpSystemLighterGrey: #385270;
+ --gpSystemLightGrey: #617b9c; --gpSystemGrey: #d2dff0;
+ --gpSystemDarkGrey: #edf3fc; --gpSystemDarkerGrey: #e4edfa;
+ --gpSystemDarkestGrey: #f7fbff; --gpStoreLightestGrey: #263e5e;
+}
+[class*="steamdesktop_DesktopUI"], [class*="libraryhome_Container"],
+[class*="library_AppDetails"], [class*="library_Container"],
+[class*="library_MainPanel"], .DialogContent, .DialogBody {
+ background: linear-gradient(145deg,#fafdff,#eaf1fc) !important;
+ color: var(--lg-text) !important;
+}
+[class*="gamelistbar_Container"], [class*="gamelist_Container"],
+[class*="friendslist_FriendsList"], [class*="chatwindow_ChatWindow"] {
+ background: linear-gradient(145deg,#f0f6ff,#dfeafb) !important;
+ color: var(--lg-text) !important; border-color: var(--lg-line) !important;
+}
+[class*="libraryhome_LibraryHome"], [class*="libraryhome_UpdatesContainer"],
+[class*="appdetails_Header"], [class*="library_MainPanel"] { background-color: var(--lg-bg) !important; }
+[class*="gamelistentry_Container"] { color: #385270 !important; border-radius: 9px; }
+[class*="gamelistentry_Container"]:hover { background: rgba(255,255,255,.7) !important; }
+[class*="gamelistentry_Selected"] { background: #c8defb !important; color: #1c487d !important; }
+[class*="libraryhome_CollectionName"], [class*="libraryhome_ShelfName"],
+[class*="appdetailssection_SectionHeader"], .DialogHeader, .DialogLabel { color: var(--lg-text) !important; }
+[class*="libraryhome_Shelf"], [class*="appdetailssection_Container"] { border-radius: 18px; }
+.DialogButton, button.DialogButton {
+ background: linear-gradient(#ffffff,#e7f0fd) !important;
+ color: var(--lg-text) !important; border: 1px solid #bfd2eb !important;
+ border-radius: 11px !important; box-shadow: inset 0 1px rgba(255,255,255,.8);
+ transition: background-color 160ms ease,border-color 160ms ease;
+}
+.DialogButton:hover { border-color: #72aaed !important; }
+.DialogButton.Primary, .DialogButton.Primary:hover { background: linear-gradient(#2190ff,#0068e0) !important; color: white !important; }
+.DialogInput, .DialogTextInputBase, input.DialogInput {
+ background: #ffffff !important; color: var(--lg-text) !important;
+ border: 1px solid #c1d4ed !important; border-radius: 11px !important;
+}
+.DialogInput:focus { border-color: #007aff !important; }
+[class*="appportrait_LibraryItemBox"], [class*="libraryassetimage_Container"] { border-radius: 12px; overflow: hidden; }
+[class*="steamdesktop_TopBar"], [class*="steamdesktop_BottomBar"] { background: #e7f0fc !important; color: var(--lg-text) !important; }
+[class*="steamdesktop_TopBar"] [class*="MenuButton"], [class*="steamdesktop_BottomBar"] [class*="Status"] { color: var(--lg-text) !important; }
+@media(prefers-reduced-motion:reduce) { .DialogButton { transition: none !important; } }

@@ -1,0 +1,16 @@
+{
+  "KPlugin": {
+    "Id": "io.github.PAAAUUULLOOOH.LiquidGlass",
+    "Name": "Liquid Glass · openSUSE",
+    "Description": "Clear glass, soft reflections and a blue accent for Plasma 6.8",
+    "Version": "1.0.0",
+    "License": "MIT",
+    "Authors": [
+      {
+        "Name": "PAAAUUULLOOOH"
+      }
+    ]
+  },
+  "KPackageStructure": "Plasma/LookAndFeel",
+  "X-Plasma-APIVersion": "2"
+}

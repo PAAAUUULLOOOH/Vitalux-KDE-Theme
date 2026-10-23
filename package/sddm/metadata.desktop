@@ -1,0 +1,14 @@
+[SddmGreeterTheme]
+Name=Liquid Glass
+Description=Clear glass for openSUSE Tumbleweed
+Author=PAAAUUULLOOOH
+Copyright=2026 PAAAUUULLOOOH
+License=MIT
+Type=sddm-theme
+Version=1.0.0
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=liquid-glass
+Theme-API=2.0
+QtVersion=6
+Screenshot=preview.png

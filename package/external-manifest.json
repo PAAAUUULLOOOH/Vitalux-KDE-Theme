@@ -1,0 +1,12 @@
+{
+  "vencord": {
+    "url": "https://github.com/Vencord/Installer/releases/download/v1.4.2/VencordInstallerCli-linux",
+    "sha256": "52642c8521a866ad241c10337144a4f513672c54b9c86a8169954785054c815d",
+    "filename": "VencordInstallerCli-linux"
+  },
+  "millennium": {
+    "url": "https://github.com/SteamClientHomebrew/Millennium/releases/download/v3.6.2/millennium-v3.6.2-linux-x86_64.tar.gz",
+    "sha256": "95bda40184dd6437da1668060ec5961c762f3c1e59923f53380e43d4e720f359",
+    "filename": "millennium-v3.6.2-linux-x86_64.tar.gz"
+  }
+}

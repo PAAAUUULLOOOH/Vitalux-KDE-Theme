@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="220" height="24" viewBox="0 0 220 24">
+<defs>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".86"/><stop offset=".47" stop-color="#f6f9ff" stop-opacity=".62"/><stop offset="1" stop-color="#e9eef9" stop-opacity=".74"/></linearGradient>
+ <linearGradient id="rim" x2=".8" y2="1"><stop stop-color="#ffffff" stop-opacity=".98"/><stop offset=".45" stop-color="#ffffff" stop-opacity=".34"/><stop offset="1" stop-color="#b6c8df" stop-opacity=".62"/></linearGradient>
+ <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#399aff"/><stop offset="1" stop-color="#007aff"/></linearGradient>
+ <linearGradient id="quiet" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".74"/><stop offset="1" stop-color="#e5ebf4" stop-opacity=".65"/></linearGradient>
+</defs>
+<g id="active-center" transform="translate(0 0)" opacity=".85"><circle cx="12" cy="12" r="10.5" fill="#ffffff" stroke="#ffffff" stroke-width="1"/><path d="M8 12h8" fill="none" stroke="#364156" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g id="inactive-center" transform="translate(30 0)" opacity=".5"><circle cx="12" cy="12" r="10.5" fill="#ffffff" stroke="#ffffff" stroke-width="1"/><path d="M8 12h8" fill="none" stroke="#364156" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g id="hover-center" transform="translate(60 0)" opacity=".85"><circle cx="12" cy="12" r="10.5" fill="#ffffff" stroke="#ffffff" stroke-width="1"/><path d="M8 12h8" fill="none" stroke="#364156" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g id="pressed-center" transform="translate(90 0)" opacity=".85"><circle cx="12" cy="12" r="10.5" fill="#caddf9" stroke="#ffffff" stroke-width="1"/><path d="M8 12h8" fill="none" stroke="#364156" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g id="deactivated-center" transform="translate(120 0)" opacity=".35"><circle cx="12" cy="12" r="10.5" fill="#ffffff" stroke="#ffffff" stroke-width="1"/><path d="M8 12h8" fill="none" stroke="#364156" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g id="hover-inactive-center" transform="translate(150 0)" opacity=".85"><circle cx="12" cy="12" r="10.5" fill="#ffffff" stroke="#ffffff" stroke-width="1"/><path d="M8 12h8" fill="none" stroke="#364156" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g id="pressed-inactive-center" transform="translate(180 0)" opacity=".85"><circle cx="12" cy="12" r="10.5" fill="#ffffff" stroke="#ffffff" stroke-width="1"/><path d="M8 12h8" fill="none" stroke="#364156" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

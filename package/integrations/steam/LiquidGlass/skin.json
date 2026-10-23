@@ -1,0 +1,7 @@
+{
+  "name": "Liquid Glass",
+  "author": "PAAAUUULLOOOH",
+  "version": "1.0.0",
+  "description": "Clear glass and blue accents for the Steam desktop client.",
+  "Steam-WebKit": "liquid-glass.css"
+}

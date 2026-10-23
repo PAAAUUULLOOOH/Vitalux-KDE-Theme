@@ -1,0 +1,48 @@
+/* Liquid Glass for GTK 4 and libadwaita, including ProtonPlus. */
+:root {
+  --window-bg-color: #f1f5fb; --window-fg-color: #1d283b;
+  --view-bg-color: #fcfdff; --view-fg-color: #1d283b;
+  --headerbar-bg-color: #e8f0fb; --headerbar-fg-color: #1d283b;
+  --sidebar-bg-color: #e5eefb; --sidebar-fg-color: #263c59;
+  --secondary-sidebar-bg-color: #ecf3fc; --secondary-sidebar-fg-color: #263c59;
+  --card-bg-color: #ffffff; --card-fg-color: #1d283b;
+  --dialog-bg-color: #f3f7fd; --dialog-fg-color: #1d283b;
+  --popover-bg-color: #f3f7fd; --popover-fg-color: #1d283b;
+  --accent-bg-color: #0068e0; --accent-fg-color: #ffffff; --accent-color: #0068e0;
+}
+@define-color window_bg_color #f1f5fb;
+@define-color window_fg_color #1d283b;
+@define-color view_bg_color #fcfdff;
+@define-color view_fg_color #1d283b;
+@define-color headerbar_bg_color #e8f0fb;
+@define-color headerbar_fg_color #1d283b;
+@define-color sidebar_bg_color #e5eefb;
+@define-color sidebar_fg_color #263c59;
+@define-color secondary_sidebar_bg_color #ecf3fc;
+@define-color card_bg_color #ffffff;
+@define-color card_fg_color #1d283b;
+@define-color dialog_bg_color #f3f7fd;
+@define-color dialog_fg_color #1d283b;
+@define-color popover_bg_color #f3f7fd;
+@define-color popover_fg_color #1d283b;
+@define-color accent_bg_color #0068e0;
+@define-color accent_fg_color #ffffff;
+@define-color accent_color #0068e0;
+@define-color borders alpha(#6281a8,.25);
+window.background { background-color: @window_bg_color; color: @window_fg_color; }
+headerbar { background: linear-gradient(145deg,#fdfefe,#e5eefb); color: @headerbar_fg_color; border-bottom: 1px solid alpha(#a3bad9,.3); box-shadow: inset 0 1px #ffffff; }
+button { border-radius: 11px; transition: background-color 160ms ease, box-shadow 160ms ease; }
+button:not(.flat):not(.suggested-action):not(.destructive-action) { background: linear-gradient(#ffffff,#edf4ff); color: @window_fg_color; border: 1px solid alpha(#9eb9db,.5); box-shadow: inset 0 1px #ffffff; }
+button:hover { box-shadow: inset 0 0 0 1px alpha(#007aff,.25); }
+button.suggested-action { background: linear-gradient(#1686ff,#0068e0); color: white; }
+entry, searchentry { background: #ffffff; color: @window_fg_color; border-radius: 12px; border: 1px solid alpha(#9eb9db,.5); }
+entry:focus-within { outline-color: alpha(#007aff,.3); border-color: #007aff; }
+.navigation-sidebar, .sidebar, .sidebar-pane { background-color: @sidebar_bg_color; color: @sidebar_fg_color; }
+.card, .boxed-list { background-color: @card_bg_color; color: @card_fg_color; border-radius: 15px; box-shadow: 0 3px 14px alpha(#224c80,.06); }
+.boxed-list > row { color: @window_fg_color; }
+.boxed-list > row:hover { background-color: alpha(#007aff,.05); }
+popover > contents, dialog, .dialog { background-color: @dialog_bg_color; color: @dialog_fg_color; border-radius: 20px; }
+switch:checked, progressbar progress, scale highlight { background-color: #007aff; }
+scrollbar slider { background-color: #9db5d4; border-radius: 6px; }
+tooltip { background-color: @popover_bg_color; color: @popover_fg_color; border: 1px solid alpha(#9eb9db,.5); border-radius: 10px; }
+*:disabled { opacity: .55; }

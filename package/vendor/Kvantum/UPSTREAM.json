@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/tsujan/Kvantum",
+  "commit": "380d6c6940c02434f18e528b61ceeb166624b78f",
+  "changes": [
+    "Style-only CMake entry point; no manager or upstream themes bundled"
+  ],
+  "license": "GPL-3.0-or-later"
+}

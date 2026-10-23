@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/Nael-Nathanael/kwin-effects-glass",
+  "commit": "0f522d7228de910df3c523e15eb111ace22f4ea2",
+  "branch": "per-pill-glass",
+  "changes": [
+    "Plasma 6.8 drawWindow bool return compatibility",
+    "C++23 for the KWin 6.8 headers"
+  ],
+  "license": "GPL-3.0"
+}

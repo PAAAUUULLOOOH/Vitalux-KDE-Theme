@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+project(kvantum)
+set(CMAKE_CXX_STANDARD 17)
+option(ENABLE_QT5 "Build Qt5 variant" OFF)
+option(ENABLE_QT4 "Build Qt4 variant" OFF)
+option(WITHOUT_KF "Build without KDE" OFF)
+option(WITHOUT_X11 "Build without X11" ON)
+add_subdirectory(style)

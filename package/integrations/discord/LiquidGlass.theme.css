@@ -1,0 +1,41 @@
+/**
+ * @name Liquid Glass
+ * @author PAAAUUULLOOOH
+ * @version 1.0.0
+ * @description Liquid Glass, activated through Vencord by the package installer.
+ */
+.theme-light, .theme-dark {
+  --background-primary: #f5f8fd;
+  --background-secondary: #eaf0f9;
+  --background-secondary-alt: #e4edf9;
+  --background-tertiary: #dfe9f7;
+  --background-floating: #f7faff;
+  --background-base-lowest: #e4edf9;
+  --background-base-lower: #eaf0f9;
+  --background-base-low: #f2f6fc;
+  --background-surface-high: #f7faff;
+  --background-surface-higher: #ffffff;
+  --background-mod-subtle: rgba(0,122,255,.06);
+  --background-modifier-hover: rgba(0,122,255,.08);
+  --background-modifier-selected: rgba(0,122,255,.15);
+  --text-normal: #1d2028;
+  --text-primary: #1d2028;
+  --text-muted: #5f6f86;
+  --text-secondary: #5f6f86;
+  --header-primary: #1d2028;
+  --header-secondary: #5f6f86;
+  --channels-default: #52657e;
+  --interactive-normal: #52657e;
+  --interactive-hover: #1d2028;
+  --interactive-active: #0068e0;
+  --brand-500: #0068e0;
+  --brand-experiment: #0068e0;
+  --channeltextarea-background: #ffffff;
+  --input-background: #ffffff;
+  --scrollbar-auto-thumb: #a2b8d7;
+  --scrollbar-auto-track: transparent;
+}
+[class*="sidebar_"] { border-right: 1px solid rgba(255,255,255,.75); }
+[class*="chatContent_"] { background: linear-gradient(145deg,#fafdff,#f0f5fc); }
+[class*="channelTextArea_"] { border: 1px solid #c9d9ef; border-radius: 16px; box-shadow: 0 3px 12px rgba(43,71,117,.06); }
+[role="dialog"], [role="menu"] { border: 1px solid rgba(255,255,255,.85); border-radius: 16px; box-shadow: 0 12px 40px rgba(38,65,110,.15); }

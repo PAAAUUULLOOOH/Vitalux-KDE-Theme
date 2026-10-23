@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/KDE/aurorae",
+  "tag": "v6.8.0",
+  "commit": "979ebc165254640e7f7763c524afa6b3aa8aaba4",
+  "changes": [
+    "Minimal entry point building only the original v2 renderer when the distribution plugin is absent"
+  ],
+  "license": "Per-file SPDX identifiers; LICENSES directory"
+}

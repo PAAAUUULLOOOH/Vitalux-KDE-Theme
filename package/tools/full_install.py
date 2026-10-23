@@ -38,7 +38,15 @@ def command(args,**kwargs):
 def kwin_version():
     program=shutil.which('kwin_wayland')
     if not program:raise RuntimeError('KWin Wayland wurde nicht gefunden. Ziel ist Plasma 6.8.0 / Wayland.')
-    text=b.run([program,'--version'])
+    # openSUSE grants the compositor file capabilities. Executing even
+    # --version can fail in a container or constrained session. RPM describes
+    # the installed binary that the matching development headers belong to.
+    text=''
+    rpm=shutil.which('rpm')
+    if rpm:
+        try:text=b.run([rpm,'-q','--file',str(Path(program).resolve()),'--queryformat','%{VERSION}'])
+        except (OSError,subprocess.SubprocessError):pass
+    if not text:text=b.run([program,'--version'])
     match=re.search(r'\b(6\.8\.\d+(?:[\w.+~-]*)?)\b',text)
     if not match:raise RuntimeError('Dieses Paket ist für KWin 6.8.x ausgelegt. Gefunden: '+text)
     return match[1]

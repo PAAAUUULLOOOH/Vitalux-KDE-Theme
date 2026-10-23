@@ -165,6 +165,20 @@ class FullThemeTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError,r'Status 9.*cmake.*Installationsprotokoll'):
                 full.command(['cmake','--build','path with spaces'])
 
+    def test_kwin_version_uses_the_installed_rpm_without_executing_the_compositor(self):
+        def which(name):return '/usr/bin/'+name if name in ('kwin_wayland','rpm') else None
+        def run(args):
+            self.assertEqual(args[0],'/usr/bin/rpm')
+            self.assertIn('/usr/bin/kwin_wayland',args)
+            return '6.8.1'
+        with patch.object(full.shutil,'which',side_effect=which),patch.object(b,'run',side_effect=run):
+            self.assertEqual(full.kwin_version(),'6.8.1')
+
+    def test_kwin_version_does_not_accept_an_unsupported_rpm_version(self):
+        with patch.object(full.shutil,'which',side_effect=lambda name:'/usr/bin/'+name),patch.object(b,'run',return_value='6.7.9'):
+            with self.assertRaisesRegex(RuntimeError,'6.8.x'):
+                full.kwin_version()
+
     def test_compositor_guard_never_loads_an_effect_for_another_running_version(self):
         self.ctx.state.mkdir(parents=True)
         self.put(self.ctx.state/'glass-build.json','{"kwin_version":"6.8.0"}')

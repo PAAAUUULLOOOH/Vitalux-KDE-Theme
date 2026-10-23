@@ -164,7 +164,7 @@
   "sddm/preview.png": "df4c2dc7ac0ea0cdfb4932c7170eea71e90f12bd45ccea76a4cba597de513eae",
   "sddm/theme.conf": "788873ab2b08f3ff622e1157e4cfa0d8c4544e745d6a3dbf2dad52ae5dd950ef",
   "tools/app_themes.py": "d76ad53894f0e04b38abe0a022acacae1dd3bfbbd45e05481bdb6b11a797d274",
-  "tools/full_install.py": "d2844b341f1638bc0e616b883550342b7ea62ca0bf4e9e34bc6008cadb94926b",
+  "tools/full_install.py": "63974bfb2667d0f166a42ed37b4bdc281ab3b655a6bdd4e6c5c64199a9a31692",
   "tools/glass_guard.py": "02f3bf89f1a8fd61bec416ef9637acabe60a46bee198454257c3729f6b74d095",
   "tools/manage.py": "3f60e7c5e10d2e4cd9a1b8fa7c74f454ea9b12703c89d4d4637400d1d0cb1cf3",
   "tools/root_helper.py": "d210f9e3661978cd368f3c9a33f4521e341d20a62c0a09d87d3b7f7bebcd7f2e",

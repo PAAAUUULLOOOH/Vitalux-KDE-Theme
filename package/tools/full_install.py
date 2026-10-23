@@ -18,7 +18,7 @@ import manage as b
 import app_themes as apps
 
 DEVEL = [
- 'cmake-full','gcc-c++','make','gettext-tools','kf6-extra-cmake-modules','kwin6-devel','libepoxy-devel',
+ 'cmake-full','gcc-c++','make','gettext-tools','kf6-extra-cmake-modules','kwin6','kwin6-devel','libepoxy-devel',
  'cmake(Qt6Core)','cmake(Qt6Gui)','cmake(Qt6DBus)','cmake(Qt6Widgets)',
  'cmake(Qt6OpenGL)','cmake(Qt6Network)','cmake(Qt6Xml)','cmake(Qt6Quick)','cmake(Qt6Svg)',
  'cmake(Qt6UiTools)','cmake(KF6Config)','cmake(KF6CoreAddons)','cmake(KF6GuiAddons)',

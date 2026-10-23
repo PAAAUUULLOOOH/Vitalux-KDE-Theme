@@ -23,10 +23,10 @@ if [[ ! -t 0 || ! -t 1 ]] && [[ -n "${DISPLAY:-}${WAYLAND_DISPLAY:-}" ]] && [[ "
     exit 1
 fi
 
-umask 077
 LOG_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/liquid-glass-kde"
-mkdir -p -- "$LOG_DIR"
 LOG_FILE="$LOG_DIR/$ACTION.log"
+(umask 077; mkdir -p -- "$LOG_DIR"; touch -- "$LOG_FILE")
+chmod 600 -- "$LOG_FILE"
 cd -- "$BASE"
 printf '\n=== Vitalux Liquid Silver · %s · %s ===\nProtokoll: %s\n' "$ACTION" "$(date -Is)" "$LOG_FILE" | tee -a "$LOG_FILE"
 RESULT=0

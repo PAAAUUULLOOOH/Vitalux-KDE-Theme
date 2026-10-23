@@ -23,6 +23,7 @@ jobs:
           sudo apt-get install -y desktop-file-utils
           desktop-file-validate ./*.desktop package/*.desktop
       - name: Compile all bundled engines on openSUSE Tumbleweed
+        shell: bash
         timeout-minutes: 25
         run: |
           docker run --rm -v "$PWD:/source:ro" -w /source opensuse/tumbleweed:latest bash -euc '

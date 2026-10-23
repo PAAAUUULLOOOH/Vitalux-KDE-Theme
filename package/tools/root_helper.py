@@ -44,7 +44,12 @@ def main():
     p.add_argument('--was-absent',action='store_true')
     args=p.parse_args()
     if os.geteuid()!=0:p.error('Dieser Helfer benötigt sudo.')
+    # sudo may inherit a user's restrictive umask. Installed theme/plugin
+    # directories must remain readable by SDDM and ordinary desktop users.
+    os.umask(0o022)
     state=Path('/var/lib/liquid-glass-kde')
+    state.mkdir(parents=True,mode=0o700,exist_ok=True)
+    state.chmod(0o700)
     ctx=base.Context(Path('/root'),Path('/usr/share'),Path('/etc'),state,())
     with base.install_lock(ctx):
         if args.action=='remove-vencord-grant':

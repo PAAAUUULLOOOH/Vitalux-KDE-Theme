@@ -5,7 +5,8 @@
   "changes": [
     "Plasma 6.8 drawWindow bool return compatibility",
     "C++23 for the KWin 6.8 headers",
-    "Detect background-item API from the found KWin version without requiring Plasma/plasma_version.h"
+    "Detect background-item API from the found KWin version without requiring Plasma/plasma_version.h",
+    "Use KWin 6.8 snapToPixels with the original edge rounding at fractional scales"
   ],
   "license": "GPL-3.0"
 }

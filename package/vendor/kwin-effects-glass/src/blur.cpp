@@ -1152,7 +1152,11 @@ void BlurEffect::blur(const RenderTarget &renderTarget, const RenderViewport &vi
                                              backgroundRect.y() * viewport.scale(),
                                              backgroundRect.width() * viewport.scale(),
                                              backgroundRect.height() * viewport.scale());
+#ifdef GLASS_KWIN_68
+    const QRect scaledBackgroundRect = snapToPixels(RectF(scaledLogicalBackgroundRect), 1.0).rounded();
+#else
     const QRect scaledBackgroundRect = snapToPixelGrid(scaledLogicalBackgroundRect);
+#endif
     const QRect deviceBackgroundRect = viewport.mapToDeviceCoordinates(Rect(backgroundRect)).rounded();
 #endif
     const auto opacity = data.opacity();
@@ -1524,8 +1528,13 @@ void BlurEffect::blur(const RenderTarget &renderTarget, const RenderViewport &vi
                                        transformedRect.y() * viewport.scale(),
                                        transformedRect.width() * viewport.scale(),
                                        transformedRect.height() * viewport.scale());
+#ifdef GLASS_KWIN_68
+    const QRectF nativeBox = QRectF(snapToPixels(RectF(scaledTransformedRect), 1.0))
+                                 .translated(-scaledBackgroundRect.topLeft());
+#else
     const QRectF nativeBox = snapToPixelGridF(scaledTransformedRect)
                                  .translated(-scaledBackgroundRect.topLeft());
+#endif
 #endif
     const BorderRadius nativeCornerRadius = cornerRadius.scaled(viewport.scale()).rounded();
     const bool isRefractionExcluded =
